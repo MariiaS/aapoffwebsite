@@ -29,6 +29,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Set up Dart
+        uses: actions/setup-dart@v2
+        with:
+          dart-version: '2.16.2'  # Specify the Dart version you need
+
       # Install dart-sdk-manager
       - name: Install dart-sdk-manager
         run: |
