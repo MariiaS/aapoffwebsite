@@ -4,7 +4,7 @@ name: Deploy Jekyll with GitHub Pages dependencies preinstalled
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["main"]
+    branches: [ "main" ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -28,17 +28,19 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v7  # Use the Flutter action to set up Flutter
         with:
-          source: ./web
-          destination: ./public
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+          flutter-version: '2.x'  # Specify the Flutter version you're using
+      - name: Build Flutter Web
+        run: |
+          flutter pub get  # Install dependencies
+          flutter build web --web-renderer html  # Build Flutter web app
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3  # Use this action to deploy to GitHub Pages
         with:
-          path: ./public/
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: build/web  # Specify the directory containing the built web app
 
   # Deployment job
   deploy:
