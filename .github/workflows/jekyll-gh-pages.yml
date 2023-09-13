@@ -29,7 +29,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Setup Flutter
-        uses: subosito/flutter-action@v7  # Use the Flutter action to set up Flutter
+        uses: subosito/flutter-action@v1  # Use the Flutter action to set up Flutter
         with:
           flutter-version: '2.x'  # Specify the Flutter version you're using
       - name: Build Flutter Web
