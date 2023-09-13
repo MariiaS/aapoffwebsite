@@ -28,14 +28,43 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
+      # Install dart-sdk-manager
+      - name: Install dart-sdk-manager
+        run: |
+          dart pub global activate dart_sdk_manager
+          export PATH="$PATH":"$HOME/.pub-cache/bin"
+        shell: bash
+
+      # List available Dart SDK versions (optional, for reference)
+      - name: List available Dart SDK versions
+        run: |
+          dart-sdk-manager list
+        shell: bash
+
+      # Use a specific Dart SDK version (replace <version> with the desired version)
+      - name: Use Dart SDK 3.0.0
+        run: |
+          dart-sdk-manager use 3.0.0
+        shell: bash
+
+      # Verify the updated Dart SDK version
+      - name: Verify Dart SDK version
+        run: |
+          dart --version
+        shell: bash
+
       - name: Setup Flutter
-        uses: subosito/flutter-action@v1  # Use the Flutter action to set up Flutter
+        uses: subosito/flutter-action@v1  # Use the Flutter action and specify v1
         with:
           flutter-version: '2.x'  # Specify the Flutter version you're using
+
       - name: Build Flutter Web
         run: |
           flutter pub get  # Install dependencies
           flutter build web --web-renderer html  # Build Flutter web app
+        shell: bash
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3  # Use this action to deploy to GitHub Pages
         with:
