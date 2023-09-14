@@ -26,12 +26,10 @@ class TextWithBackgroundColor extends StatefulWidget {
 class _TextWithBackgroundColorState extends State<TextWithBackgroundColor> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-        decoration: BoxDecoration(
-          color: FlutterFlowTheme.of(context).alternate,
-          borderRadius: BorderRadius.all(Radius.circular(8.0)),
-        ),
-        child:
-            Text(widget.text, style: Theme.of(context).textTheme.displaySmall));
+    return Text(widget.text,
+        style: Theme.of(context)
+            .textTheme
+            .displaySmall!
+            .copyWith(backgroundColor: FlutterFlowTheme.of(context).alternate));
   }
 }
