@@ -259,21 +259,6 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                           ],
                                                                         ),
                                                                       ),
-                                                                      Container(
-                                                                        width: MediaQuery.sizeOf(context).width *
-                                                                            0.33,
-                                                                        height:
-                                                                            60.0,
-                                                                        child: custom_widgets
-                                                                            .TextWithBackgroundColor(
-                                                                          width:
-                                                                              MediaQuery.sizeOf(context).width * 0.33,
-                                                                          height:
-                                                                              60.0,
-                                                                          text:
-                                                                              'Test',
-                                                                        ),
-                                                                      ),
                                                                     ],
                                                                   ),
                                                                 ),
@@ -785,6 +770,31 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         -1.0,
                                                                         -1.0),
                                                                 children: [
+                                                                  Padding(
+                                                                    padding: EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            4.0,
+                                                                            0.0,
+                                                                            0.0,
+                                                                            0.0),
+                                                                    child:
+                                                                        Container(
+                                                                      width: MediaQuery.sizeOf(context)
+                                                                              .width *
+                                                                          0.33,
+                                                                      height:
+                                                                          50.0,
+                                                                      child: custom_widgets
+                                                                          .TextWithBackgroundColor(
+                                                                        width: MediaQuery.sizeOf(context).width *
+                                                                            0.33,
+                                                                        height:
+                                                                            50.0,
+                                                                        text:
+                                                                            'New Website hooray!',
+                                                                      ),
+                                                                    ),
+                                                                  ),
                                                                   Align(
                                                                     alignment:
                                                                         AlignmentDirectional(
