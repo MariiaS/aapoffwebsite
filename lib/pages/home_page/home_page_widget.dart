@@ -798,30 +798,6 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                   Align(
                                                                     alignment:
                                                                         AlignmentDirectional(
-                                                                            -1.00,
-                                                                            -1.00),
-                                                                    child:
-                                                                        Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                                                          6.0,
-                                                                          0.0,
-                                                                          0.0,
-                                                                          0.0),
-                                                                      child:
-                                                                          AutoSizeText(
-                                                                        'New website, hooray!',
-                                                                        textAlign:
-                                                                            TextAlign.start,
-                                                                        style: FlutterFlowTheme.of(context)
-                                                                            .displaySmall,
-                                                                        minFontSize:
-                                                                            14.0,
-                                                                      ),
-                                                                    ),
-                                                                  ),
-                                                                  Align(
-                                                                    alignment:
-                                                                        AlignmentDirectional(
                                                                             0.00,
                                                                             0.00),
                                                                     child:
