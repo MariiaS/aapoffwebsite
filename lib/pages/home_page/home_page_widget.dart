@@ -259,6 +259,21 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                           ],
                                                                         ),
                                                                       ),
+                                                                      Container(
+                                                                        width: MediaQuery.sizeOf(context).width *
+                                                                            0.33,
+                                                                        height:
+                                                                            60.0,
+                                                                        child: custom_widgets
+                                                                            .TextWithBackgroundColor(
+                                                                          width:
+                                                                              MediaQuery.sizeOf(context).width * 0.33,
+                                                                          height:
+                                                                              60.0,
+                                                                          text:
+                                                                              'Test',
+                                                                        ),
+                                                                      ),
                                                                     ],
                                                                   ),
                                                                 ),
@@ -628,7 +643,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                       image:
                                           'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/aapo-site-59ix94/assets/zesmdguzjjaj/pin_26.png',
                                       positionX: 100.0,
-                                      positionY: 300.0,
+                                      positionY: 100.0,
                                     ),
                                   ),
                                 ],
