@@ -27,17 +27,11 @@ class _TextWithBackgroundColorState extends State<TextWithBackgroundColor> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
-        color: FlutterFlowTheme.of(context).alternate,
-        borderRadius: BorderRadius.all(Radius.circular(8.0)),
-      ),
-      child: Text(
-        widget.text,
-        style: Theme.of(context).textTheme.displayLarge!.copyWith(
-            // Customize the text style here (using the secondary font family)
-            fontFamily: 'Biro Script Sloppy',
-            fontWeight: FontWeight.normal),
-      ),
-    );
+        decoration: BoxDecoration(
+          color: FlutterFlowTheme.of(context).alternate,
+          borderRadius: BorderRadius.all(Radius.circular(8.0)),
+        ),
+        child:
+            Text(widget.text, style: Theme.of(context).textTheme.displaySmall));
   }
 }
