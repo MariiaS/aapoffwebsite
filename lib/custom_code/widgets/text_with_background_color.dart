@@ -27,8 +27,7 @@ class _TextWithBackgroundColorState extends State<TextWithBackgroundColor> {
   @override
   Widget build(BuildContext context) {
     return Text(widget.text,
-        style: Theme.of(context)
-            .textTheme
+        style: FlutterFlowTheme.of(context)
             .displaySmall!
             .copyWith(backgroundColor: FlutterFlowTheme.of(context).alternate));
   }
