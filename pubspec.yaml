@@ -39,6 +39,7 @@ dependencies:
   hive: 2.2.3
   intl: 0.18.0
   json_path: 0.6.2
+  octo_image: 1.0.2
   page_transition: 2.0.4
   path_provider: 2.0.14
   path_provider_android: 2.0.25

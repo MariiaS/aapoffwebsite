@@ -7,6 +7,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:octo_image/octo_image.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'home_page_model.dart';
@@ -1022,9 +1023,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                             Duration(milliseconds: 500),
                                                                         fadeOutDuration:
                                                                             Duration(milliseconds: 500),
-                                                                        imageUrl: columnExhibitionsRow
-                                                                            .imageList
-                                                                            .first,
+                                                                        imageUrl:
+                                                                            columnExhibitionsRow.coverImage!,
                                                                         width: MediaQuery.sizeOf(context).width *
                                                                             1.0,
                                                                         height:
