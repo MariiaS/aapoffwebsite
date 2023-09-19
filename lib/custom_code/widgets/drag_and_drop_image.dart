@@ -1,4 +1,5 @@
 // Automatic FlutterFlow imports
+import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'index.dart'; // Imports other custom widgets
@@ -64,7 +65,7 @@ class _DragAndDropImageState extends State<DragAndDropImage> {
             onDraggableCanceled: (velocity, offset) {
               // When the drag is canceled, update the position.
               setState(() {
-                position = offset;
+                position = Offset(offset.dx, offset.dy - 88.0);
               });
             },
             child: Image.network(
