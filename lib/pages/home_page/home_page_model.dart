@@ -5,6 +5,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:octo_image/octo_image.dart';
@@ -26,6 +27,12 @@ class HomePageModel extends FlutterFlowModel {
   // State field(s) for TextField widget.
   TextEditingController? textController2;
   String? Function(BuildContext, String?)? textController2Validator;
+  // State field(s) for TextField widget.
+  TextEditingController? textController3;
+  String? Function(BuildContext, String?)? textController3Validator;
+  // State field(s) for TextField widget.
+  TextEditingController? textController4;
+  String? Function(BuildContext, String?)? textController4Validator;
 
   /// Initialization and disposal methods.
 
@@ -36,6 +43,8 @@ class HomePageModel extends FlutterFlowModel {
     tabBarController?.dispose();
     textController1?.dispose();
     textController2?.dispose();
+    textController3?.dispose();
+    textController4?.dispose();
   }
 
   /// Action blocks are added here.

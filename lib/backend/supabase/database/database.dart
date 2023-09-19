@@ -5,4 +5,6 @@ export '../supabase.dart';
 export 'row.dart';
 export 'table.dart';
 
+export 'tables/other.dart';
+export 'tables/news.dart';
 export 'tables/exhibitions.dart';
