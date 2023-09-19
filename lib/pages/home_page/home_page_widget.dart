@@ -1023,8 +1023,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                             Duration(milliseconds: 500),
                                                                         fadeOutDuration:
                                                                             Duration(milliseconds: 500),
-                                                                        imageUrl:
-                                                                            columnExhibitionsRow.coverImage!,
+                                                                        imageUrl: columnExhibitionsRow
+                                                                            .imageList
+                                                                            .first,
                                                                         width: MediaQuery.sizeOf(context).width *
                                                                             1.0,
                                                                         height:
