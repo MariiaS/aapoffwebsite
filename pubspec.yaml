@@ -98,6 +98,7 @@ flutter:
   assets:
     - assets/fonts/
     - assets/images/
+    - assets/images/pins/
     - assets/videos/
     - assets/audios/
     - assets/lottie_animations/
