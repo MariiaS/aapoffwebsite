@@ -675,8 +675,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                       height:
                                           MediaQuery.sizeOf(context).height *
                                               1.0,
-                                      image:
-                                          'https://fxkeftgjkcfenyqkxjvt.supabase.co/storage/v1/object/sign/Aapo_images/Pins/pin_35.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJBYXBvX2ltYWdlcy9QaW5zL3Bpbl8zNS5qcGciLCJpYXQiOjE2OTUxNjUwMzUsImV4cCI6MjAxMDUyNTAzNX0.ZEAPFCOO4oxhpKy2gZSCiSIRwcZfkpg3RU8He0U2nOk&t=2023-09-19T23%3A10%3A35.807Z',
+                                      image: 'assets/images/pin_26.png',
                                       positionX: 100.0,
                                       positionY: 100.0,
                                     ),
@@ -1246,8 +1245,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                       height:
                                           MediaQuery.sizeOf(context).height *
                                               1.0,
-                                      image:
-                                          'https://fxkeftgjkcfenyqkxjvt.supabase.co/storage/v1/object/sign/Aapo_images/Pins/pin_35.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJBYXBvX2ltYWdlcy9QaW5zL3Bpbl8zNS5qcGciLCJpYXQiOjE2OTUxNjUwMzUsImV4cCI6MjAxMDUyNTAzNX0.ZEAPFCOO4oxhpKy2gZSCiSIRwcZfkpg3RU8He0U2nOk&t=2023-09-19T23%3A10%3A35.807Z',
+                                      image: 'assets/images/pin_26.png',
                                       positionX: 100.0,
                                       positionY: 100.0,
                                     ),
@@ -1817,8 +1815,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                       height:
                                           MediaQuery.sizeOf(context).height *
                                               1.0,
-                                      image:
-                                          'https://fxkeftgjkcfenyqkxjvt.supabase.co/storage/v1/object/sign/Aapo_images/Pins/pin_35.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJBYXBvX2ltYWdlcy9QaW5zL3Bpbl8zNS5qcGciLCJpYXQiOjE2OTUxNjUwMzUsImV4cCI6MjAxMDUyNTAzNX0.ZEAPFCOO4oxhpKy2gZSCiSIRwcZfkpg3RU8He0U2nOk&t=2023-09-19T23%3A10%3A35.807Z',
+                                      image: 'assets/images/pin_26.png',
                                       positionX: 100.0,
                                       positionY: 100.0,
                                     ),
@@ -2161,7 +2158,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                       height:
                                           MediaQuery.sizeOf(context).height *
                                               1.0,
-                                      image: '\'assets/images/pin_26.png\'',
+                                      image: 'assets/images/pin_26.png',
                                       positionX: 200.0,
                                       positionY: 20.0,
                                     ),
@@ -2177,7 +2174,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                       height:
                                           MediaQuery.sizeOf(context).height *
                                               1.0,
-                                      image: '\'assets/images/pin_26.png\'',
+                                      image: 'assets/images/pin_26.png',
                                       positionX: 50.0,
                                       positionY: 250.0,
                                     ),
