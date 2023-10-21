@@ -28,11 +28,12 @@ jobs:
         run: |
           flutter build web
           ls -l build/web
+          
+      - name: Copy build files to root
+        run: mv build/web/* .
 
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: build/web
