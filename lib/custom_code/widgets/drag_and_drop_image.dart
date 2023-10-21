@@ -68,7 +68,7 @@ class _DragAndDropImageState extends State<DragAndDropImage> {
                 position = Offset(offset.dx, offset.dy - 88.0);
               });
             },
-            child: Image.network(
+            child: Image.asset(
               widget.image,
               width: 100,
               height: 100,

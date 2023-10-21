@@ -37,7 +37,7 @@ dependencies:
   google_fonts: 4.0.3
   gotrue: 1.11.0
   hive: 2.2.3
-  intl: 0.18.0
+  intl: 0.18.1
   json_path: 0.6.2
   octo_image: 1.0.2
   page_transition: 2.0.4
@@ -103,7 +103,6 @@ flutter:
     - assets/lottie_animations/
     - assets/rive_animations/
     - assets/pdfs/
-
   fonts:
     - family: 'Biro Script Sloppy'
       fonts:
@@ -116,7 +115,6 @@ flutter:
           weight: 600
         - asset: assets/fonts/Biro_Script_Sloppy_Plus.otf
           weight: 700
-
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

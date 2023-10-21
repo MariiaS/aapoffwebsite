@@ -7,6 +7,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:octo_image/octo_image.dart';
 import 'package:provider/provider.dart';
@@ -38,9 +39,13 @@ class _HomePageWidgetState extends State<HomePageWidget>
       initialIndex: 0,
     )..addListener(() => setState(() {}));
     _model.textController1 ??= TextEditingController();
+    _model.textFieldFocusNode1 ??= FocusNode();
     _model.textController2 ??= TextEditingController();
+    _model.textFieldFocusNode2 ??= FocusNode();
     _model.textController3 ??= TextEditingController();
+    _model.textFieldFocusNode3 ??= FocusNode();
     _model.textController4 ??= TextEditingController();
+    _model.textFieldFocusNode4 ??= FocusNode();
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
@@ -53,8 +58,19 @@ class _HomePageWidgetState extends State<HomePageWidget>
 
   @override
   Widget build(BuildContext context) {
+    if (isiOS) {
+      SystemChrome.setSystemUIOverlayStyle(
+        SystemUiOverlayStyle(
+          statusBarBrightness: Theme.of(context).brightness,
+          systemStatusBarContrastEnforced: true,
+        ),
+      );
+    }
+
     return GestureDetector(
-      onTap: () => FocusScope.of(context).requestFocus(_model.unfocusNode),
+      onTap: () => _model.unfocusNode.canRequestFocus
+          ? FocusScope.of(context).requestFocus(_model.unfocusNode)
+          : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
@@ -446,6 +462,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                     controller:
                                                                         _model
                                                                             .textController1,
+                                                                    focusNode:
+                                                                        _model
+                                                                            .textFieldFocusNode1,
                                                                     textCapitalization:
                                                                         TextCapitalization
                                                                             .characters,
@@ -1014,6 +1033,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                     controller:
                                                                         _model
                                                                             .textController2,
+                                                                    focusNode:
+                                                                        _model
+                                                                            .textFieldFocusNode2,
                                                                     textCapitalization:
                                                                         TextCapitalization
                                                                             .characters,
@@ -1582,6 +1604,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                     controller:
                                                                         _model
                                                                             .textController3,
+                                                                    focusNode:
+                                                                        _model
+                                                                            .textFieldFocusNode3,
                                                                     textCapitalization:
                                                                         TextCapitalization
                                                                             .characters,
@@ -1853,6 +1878,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                   TextFormField(
                                                                 controller: _model
                                                                     .textController4,
+                                                                focusNode: _model
+                                                                    .textFieldFocusNode4,
                                                                 textCapitalization:
                                                                     TextCapitalization
                                                                         .characters,
@@ -2134,8 +2161,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                       height:
                                           MediaQuery.sizeOf(context).height *
                                               1.0,
-                                      image:
-                                          'https://fxkeftgjkcfenyqkxjvt.supabase.co/storage/v1/object/sign/Aapo_images/Pins/pin_26.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJBYXBvX2ltYWdlcy9QaW5zL3Bpbl8yNi5qcGciLCJpYXQiOjE2OTUxNjU2MzUsImV4cCI6MjAxMDUyNTYzNX0.ux0LbZfaoYxBeYVPKwP2VUASV5MuOS3_ZpCKZxdWPDI&t=2023-09-19T23%3A20%3A35.385Z',
+                                      image: '\'assets/images/pin_26.png\'',
                                       positionX: 200.0,
                                       positionY: 20.0,
                                     ),
@@ -2151,8 +2177,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                       height:
                                           MediaQuery.sizeOf(context).height *
                                               1.0,
-                                      image:
-                                          'https://fxkeftgjkcfenyqkxjvt.supabase.co/storage/v1/object/sign/Aapo_images/Pins/pin_26.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJBYXBvX2ltYWdlcy9QaW5zL3Bpbl8yNi5qcGciLCJpYXQiOjE2OTUxNjU2MzUsImV4cCI6MjAxMDUyNTYzNX0.ux0LbZfaoYxBeYVPKwP2VUASV5MuOS3_ZpCKZxdWPDI&t=2023-09-19T23%3A20%3A35.385Z',
+                                      image: '\'assets/images/pin_26.png\'',
                                       positionX: 50.0,
                                       positionY: 250.0,
                                     ),
@@ -2168,8 +2193,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                       height:
                                           MediaQuery.sizeOf(context).height *
                                               1.0,
-                                      image:
-                                          'https://fxkeftgjkcfenyqkxjvt.supabase.co/storage/v1/object/sign/Aapo_images/Pins/pin_21.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJBYXBvX2ltYWdlcy9QaW5zL3Bpbl8yMS5qcGciLCJpYXQiOjE2OTUxNjUxNzgsImV4cCI6MjAxMDUyNTE3OH0.C9the0ALDyzWnrBvMW69iyl2ZOJn2Qq87RVClcbmawU&t=2023-09-19T23%3A12%3A58.740Z',
+                                      image: 'assets/images/pin_26.png',
                                       positionX: 300.0,
                                       positionY: 280.0,
                                     ),
@@ -2185,8 +2209,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                       height:
                                           MediaQuery.sizeOf(context).height *
                                               1.0,
-                                      image:
-                                          'https://fxkeftgjkcfenyqkxjvt.supabase.co/storage/v1/object/sign/Aapo_images/Pins/pin_35.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJBYXBvX2ltYWdlcy9QaW5zL3Bpbl8zNS5qcGciLCJpYXQiOjE2OTUxNjUwMzUsImV4cCI6MjAxMDUyNTAzNX0.ZEAPFCOO4oxhpKy2gZSCiSIRwcZfkpg3RU8He0U2nOk&t=2023-09-19T23%3A10%3A35.807Z',
+                                      image: 'assets/images/pin_26.png',
                                       positionX: 500.0,
                                       positionY: 100.0,
                                     ),
