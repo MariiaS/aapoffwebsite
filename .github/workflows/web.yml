@@ -31,5 +31,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: build/web
-
-          #${{ secrets.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 }}
