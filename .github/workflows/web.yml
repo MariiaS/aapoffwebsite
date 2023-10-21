@@ -25,7 +25,10 @@ jobs:
           flutter-version: 3.x
 
       - name: Build web app
-        run: flutter build web
+        run: |
+          flutter build web
+          ls -l build/web
+        
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
