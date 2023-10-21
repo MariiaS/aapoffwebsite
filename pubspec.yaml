@@ -89,13 +89,13 @@ dev_dependencies:
 # The following section is specific to Flutter.
 flutter:
 
-  web:
-    build:
-      options:
-        --web-renderer=html
-    compilers:
-      dart2js:
-        enableAsserts: true
+#  web:
+#    build:
+#      options:
+#        --web-renderer=html
+#    compilers:
+#      dart2js:
+#        enableAsserts: true
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
