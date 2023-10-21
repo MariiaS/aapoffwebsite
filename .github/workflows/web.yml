@@ -16,16 +16,6 @@ jobs:
         with:
           ref: main
 
-      - name: Build web app
-        run: flutter build web
-
-      - name: Copy build files to root
-        uses: actions/setup-ruby@v1
-        with:
-          ruby-version: 2.7
-        run: |
-          rsync -a build/web/ ./
-
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
