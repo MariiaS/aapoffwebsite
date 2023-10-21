@@ -29,5 +29,15 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          permissions:
+            actions: write
+            deployments: write
+            id-token: write
+            packages: write
+            pages: write
+            pull-requests: write
+            repository-projects: write
+            security-events: write
+            statuses: write
           publish_branch: gh-pages
           publish_dir: build/web
