@@ -12,11 +12,13 @@ class TextWithBackgroundColor extends StatefulWidget {
     Key? key,
     this.width,
     this.height,
+    required this.highlightHeight,
     required this.text,
   }) : super(key: key);
 
   final double? width;
   final double? height;
+  final double highlightHeight;
   final String text;
 
   @override
@@ -27,9 +29,35 @@ class TextWithBackgroundColor extends StatefulWidget {
 class _TextWithBackgroundColorState extends State<TextWithBackgroundColor> {
   @override
   Widget build(BuildContext context) {
-    return Text(widget.text,
-        style: FlutterFlowTheme.of(context)
-            .displaySmall!
-            .copyWith(backgroundColor: FlutterFlowTheme.of(context).alternate));
+    return Container(
+      constraints: BoxConstraints(
+        maxWidth: widget.width ?? double.infinity,
+        maxHeight: widget.height ?? double.infinity,
+      ),
+      child: Stack(
+        alignment: Alignment.centerLeft,
+        children: [
+          Positioned(
+            left: 0,
+            child: Container(
+              height: widget.highlightHeight,
+              width: (widget.text.length * 23)
+                  .toDouble(), // Adjust the multiplier based on your font size and style
+              color: FlutterFlowTheme.of(context).alternate,
+            ),
+          ),
+          Positioned(
+            left: 0,
+            child: Padding(
+              padding: EdgeInsets.zero,
+              child: Text(
+                widget.text,
+                style: FlutterFlowTheme.of(context).displaySmall,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
