@@ -1,0 +1,109 @@
+<changelist name="Uncommitted_changes_before_rebase_[Changes]" date="1698069237922" recycled="false" toDelete="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before rebase [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value=".dart_tool/chrome-device/Default/Service Worker/ScriptCache/index-dir/the-real-index" />
+    <option name="AFTER_PATH" value=".dart_tool/chrome-device/Default/Service Worker/ScriptCache/index-dir/the-real-index" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/the-real-index" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/flutter_assets/assets/pdfs/favicon.png" />
+    <option name="AFTER_PATH" value="build/flutter_assets/assets/pdfs/favicon.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/favicon.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".dart_tool/chrome-device/Default/History" />
+    <option name="AFTER_PATH" value=".dart_tool/chrome-device/Default/History" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/History" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/flutter_assets/assets/fonts/favicon.png" />
+    <option name="AFTER_PATH" value="build/flutter_assets/assets/fonts/favicon.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/favicon1.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".dart_tool/chrome-device/Default/Session Storage/000003.log" />
+    <option name="AFTER_PATH" value=".dart_tool/chrome-device/Default/Session Storage/000003.log" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/000003.log" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/flutter_assets/assets/rive_animations/favicon.png" />
+    <option name="AFTER_PATH" value="build/flutter_assets/assets/rive_animations/favicon.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/favicon2.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".dart_tool/chrome-device/Default/WebStorage/QuotaManager" />
+    <option name="AFTER_PATH" value=".dart_tool/chrome-device/Default/WebStorage/QuotaManager" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/QuotaManager" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".dart_tool/chrome-device/Default/shared_proto_db/metadata/000003.log" />
+    <option name="AFTER_PATH" value=".dart_tool/chrome-device/Default/shared_proto_db/metadata/000003.log" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/0000031.log" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/flutter_assets/assets/audios/favicon.png" />
+    <option name="AFTER_PATH" value="build/flutter_assets/assets/audios/favicon.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/favicon3.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/flutter_assets/assets/images/favicon.png" />
+    <option name="AFTER_PATH" value="build/flutter_assets/assets/images/favicon.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/favicon4.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/flutter_assets/assets/videos/favicon.png" />
+    <option name="AFTER_PATH" value="build/flutter_assets/assets/videos/favicon.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/favicon5.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".dart_tool/chrome-device/Default/Favicons" />
+    <option name="AFTER_PATH" value=".dart_tool/chrome-device/Default/Favicons" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/Favicons" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".dart_tool/chrome-device/Default/Reporting and NEL" />
+    <option name="AFTER_PATH" value=".dart_tool/chrome-device/Default/Reporting and NEL" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/Reporting and NEL" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".dart_tool/chrome-device/Default/Site Characteristics Database/000003.log" />
+    <option name="AFTER_PATH" value=".dart_tool/chrome-device/Default/Site Characteristics Database/000003.log" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/0000032.log" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/flutter_assets/assets/fonts/Biro_Script_Sloppy_Plus.otf" />
+    <option name="AFTER_PATH" value="build/flutter_assets/assets/fonts/Biro_Script_Sloppy_Plus.otf" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/Biro_Script_Sloppy_Plus.otf" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".dart_tool/chrome-device/Default/Visited Links" />
+    <option name="AFTER_PATH" value=".dart_tool/chrome-device/Default/Visited Links" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/Visited Links" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/flutter_assets/AssetManifest.bin" />
+    <option name="AFTER_PATH" value="build/flutter_assets/AssetManifest.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/AssetManifest.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".dart_tool/chrome-device/Default/shared_proto_db/000003.log" />
+    <option name="AFTER_PATH" value=".dart_tool/chrome-device/Default/shared_proto_db/000003.log" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/0000033.log" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/9849d3fde14f8238bc82d80453267a41.cache.dill.track.dill" />
+    <option name="AFTER_PATH" value="build/9849d3fde14f8238bc82d80453267a41.cache.dill.track.dill" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/9849d3fde14f8238bc82d80453267a41.cache.dill.track.dill" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="build/flutter_assets/assets/lottie_animations/favicon.png" />
+    <option name="AFTER_PATH" value="build/flutter_assets/assets/lottie_animations/favicon.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/favicon6.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".dart_tool/chrome-device/Default/Service Worker/Database/000003.log" />
+    <option name="AFTER_PATH" value=".dart_tool/chrome-device/Default/Service Worker/Database/000003.log" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/0000034.log" />
+  </binary>
+</changelist>
