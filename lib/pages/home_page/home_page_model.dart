@@ -19,6 +19,7 @@ class HomePageModel extends FlutterFlowModel<HomePageWidget> {
   ///  Local state fields for this page.
 
   bool isGalleryHidden = true;
+  int hoveredTabIndex = 0;
 
   ExhibitionsRow? exhibitionRef;
 

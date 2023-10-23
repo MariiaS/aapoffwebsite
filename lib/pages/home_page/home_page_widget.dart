@@ -14,6 +14,7 @@ import 'package:octo_image/octo_image.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'home_page_model.dart';
+import 'hover_tab_widget.dart';
 export 'home_page_model.dart';
 
 class HomePageWidget extends StatefulWidget {
@@ -129,20 +130,47 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                   ),
                               indicatorColor:
                                   FlutterFlowTheme.of(context).primary,
+                              overlayColor: MaterialStateProperty.all<Color>(
+                                FlutterFlowTheme.of(context).primary,
+                              ),
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 20.0),
                               tabs: [
-                                Tab(
+                                HoverTab(
                                   text: 'NEWS',
+                                  isHovered: _model.hoveredTabIndex == 0,
+                                  onHover: () {
+                                    setState(() {
+                                      _model.hoveredTabIndex = 0;
+                                    });
+                                  },
                                 ),
-                                Tab(
+                                HoverTab(
                                   text: 'EXHIBITIONS',
+                                  isHovered: _model.hoveredTabIndex == 1,
+                                  onHover: () {
+                                    setState(() {
+                                      _model.hoveredTabIndex = 1;
+                                    });
+                                  },
                                 ),
-                                Tab(
+                                HoverTab(
                                   text: 'OTHER',
+                                  isHovered: _model.hoveredTabIndex == 2,
+                                  onHover: () {
+                                    setState(() {
+                                      _model.hoveredTabIndex = 2;
+                                    });
+                                  },
                                 ),
-                                Tab(
+                                HoverTab(
                                   text: 'INFO',
+                                  isHovered: _model.hoveredTabIndex == 3,
+                                  onHover: () {
+                                    setState(() {
+                                      _model.hoveredTabIndex = 3;
+                                    });
+                                  },
                                 ),
                               ],
                               controller: _model.tabBarController,
