@@ -957,8 +957,6 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                       MediaQuery.sizeOf(context)
                                                               .height *
                                                           1.0,
-                                                  image:
-                                                      'assets/images/pin_26.png',
                                                   positionX: 100.0,
                                                   positionY: 300.0,
                                                 ),
@@ -1591,7 +1589,6 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                       height:
                                           MediaQuery.sizeOf(context).height *
                                               1.0,
-                                      image: 'assets/images/pin_26.png',
                                       positionX: 200.0,
                                       positionY: 20.0,
                                     ),
@@ -1607,7 +1604,6 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                       height:
                                           MediaQuery.sizeOf(context).height *
                                               1.0,
-                                      image: 'assets/images/pin_26.png',
                                       positionX: 50.0,
                                       positionY: 250.0,
                                     ),
@@ -1623,7 +1619,6 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                       height:
                                           MediaQuery.sizeOf(context).height *
                                               1.0,
-                                      image: 'assets/images/pin_26.png',
                                       positionX: 300.0,
                                       positionY: 280.0,
                                     ),
@@ -1639,7 +1634,6 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                       height:
                                           MediaQuery.sizeOf(context).height *
                                               1.0,
-                                      image: 'assets/images/pin_26.png',
                                       positionX: 500.0,
                                       positionY: 100.0,
                                     ),
