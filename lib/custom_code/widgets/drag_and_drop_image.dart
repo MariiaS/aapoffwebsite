@@ -1,3 +1,4 @@
+// Automatic FlutterFlow imports
 import 'dart:convert';
 
 import 'package:flutter/services.dart';
@@ -54,12 +55,12 @@ class _DragAndDropImageState extends State<DragAndDropImage> {
       if (imagePaths.isNotEmpty) {
         _randomImage = imagePaths[math.Random().nextInt(imagePaths.length)];
       } else {
-// Handle the case when no images are found in the directory
+        // Handle the case when no images are found in the directory
         _randomImage = "null"; // Set _randomImage to null
       }
       setState(() {}); // Trigger a rebuild after loading the random image
     } catch (e) {
-// Handle exceptions if necessary
+      // Handle exceptions if necessary
       print('Error loading image: $e');
       _randomImage = "null"; // Set _randomImage to null
       setState(() {}); // Trigger a rebuild even if there was an error
@@ -74,7 +75,7 @@ class _DragAndDropImageState extends State<DragAndDropImage> {
           left: position.dx,
           top: position.dy,
           child: Draggable<String>(
-// Data is the value this Draggable stores.
+            // Data is the value this Draggable stores.
             data: _randomImage,
 
             feedback: Image.asset(
@@ -87,15 +88,14 @@ class _DragAndDropImageState extends State<DragAndDropImage> {
               width: 100,
               height: 100,
               decoration: BoxDecoration(
-                color: Colors
-                    .transparent, // You can set a background color here if needed
+                color: Colors.transparent, // You can set a background color here if needed
               ),
             ),
             onDraggableCanceled: (velocity, offset) {
-// When the drag is canceled, update the position.
+              // When the drag is canceled, update the position.
               setState(() {
                 position = Offset(offset.dx, offset.dy - 88.0);
-              });
+              });// Load a new random image after dragging
             },
             child: Image.asset(
               _randomImage,
