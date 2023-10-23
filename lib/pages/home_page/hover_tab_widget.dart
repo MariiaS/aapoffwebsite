@@ -30,7 +30,7 @@ class _HoverTabState extends State<HoverTab> {
           widget.text,
           style: TextStyle(
             color: widget.isHovered
-                ? Colors.black
+                ? FlutterFlowTheme.of(context).primaryText
                 : FlutterFlowTheme.of(context).secondaryText,
           ),
         ),

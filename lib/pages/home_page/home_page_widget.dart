@@ -92,16 +92,16 @@ class _HomePageWidgetState extends State<HomePageWidget>
                       focusColor: Colors.transparent,
                       hoverColor: Colors.transparent,
                       highlightColor: Colors.transparent,
-                      onTap: () async {
-                        setState(() {
-                          _model.isGalleryHidden = true;
-                        });
-                      },
                       child: Column(
                         children: [
                           Align(
                             alignment: Alignment(0.0, 0),
                             child: TabBar(
+                              onTap: (int index) async {
+                                setState(() {
+                                  _model.isGalleryHidden = true;
+                                });
+                              },
                               labelColor:
                                   FlutterFlowTheme.of(context).primaryText,
                               unselectedLabelColor:
@@ -136,14 +136,17 @@ class _HomePageWidgetState extends State<HomePageWidget>
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 20.0),
                               tabs: [
-                                HoverTab(
-                                  text: 'NEWS',
-                                  isHovered: _model.hoveredTabIndex == 0,
-                                  onHover: () {
-                                    setState(() {
-                                      _model.hoveredTabIndex = 0;
-                                    });
-                                  },
+                                Container(
+                                  alignment: Alignment.centerLeft,
+                                  child: HoverTab(
+                                    text: 'NEWS',
+                                    isHovered: _model.hoveredTabIndex == 0,
+                                    onHover: () {
+                                      setState(() {
+                                        _model.hoveredTabIndex = 0;
+                                      });
+                                    },
+                                  ),
                                 ),
                                 HoverTab(
                                   text: 'EXHIBITIONS',
@@ -163,14 +166,17 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                     });
                                   },
                                 ),
-                                HoverTab(
-                                  text: 'INFO',
-                                  isHovered: _model.hoveredTabIndex == 3,
-                                  onHover: () {
-                                    setState(() {
-                                      _model.hoveredTabIndex = 3;
-                                    });
-                                  },
+                                Container(
+                                  alignment: Alignment.centerRight,
+                                  child: HoverTab(
+                                    text: 'INFO',
+                                    isHovered: _model.hoveredTabIndex == 3,
+                                    onHover: () {
+                                      setState(() {
+                                        _model.hoveredTabIndex = 3;
+                                      });
+                                    },
+                                  ),
                                 ),
                               ],
                               controller: _model.tabBarController,
