@@ -108,11 +108,25 @@ class _HomePageWidgetState extends State<HomePageWidget>
                               labelStyle: FlutterFlowTheme.of(context)
                                   .titleLarge
                                   .override(
-                                    fontFamily: 'Epilogue',
+                                    fontFamily: FlutterFlowTheme.of(context)
+                                        .titleLargeFamily,
                                     fontWeight: FontWeight.normal,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .titleLargeFamily),
                                   ),
-                              unselectedLabelStyle:
-                                  FlutterFlowTheme.of(context).titleLarge,
+                              unselectedLabelStyle: FlutterFlowTheme.of(context)
+                                  .titleLarge
+                                  .override(
+                                    fontFamily: FlutterFlowTheme.of(context)
+                                        .titleLargeFamily,
+                                    fontWeight: FontWeight.normal,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .titleLargeFamily),
+                                  ),
                               indicatorColor:
                                   FlutterFlowTheme.of(context).primary,
                               padding: EdgeInsetsDirectional.fromSTEB(
@@ -155,8 +169,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                               if (!snapshot.hasData) {
                                                 return Center(
                                                   child: SizedBox(
-                                                    width: 50.0,
-                                                    height: 50.0,
+                                                    width: 30.0,
+                                                    height: 30.0,
                                                     child:
                                                         CircularProgressIndicator(
                                                       valueColor:
@@ -164,7 +178,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                               Color>(
                                                         FlutterFlowTheme.of(
                                                                 context)
-                                                            .primary,
+                                                            .accent4,
                                                       ),
                                                     ),
                                                   ),
@@ -229,8 +243,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         style: FlutterFlowTheme.of(context)
                                                                             .labelLarge
                                                                             .override(
-                                                                              fontFamily: 'Epilogue',
+                                                                              fontFamily: FlutterFlowTheme.of(context).labelLargeFamily,
                                                                               color: FlutterFlowTheme.of(context).primaryText,
+                                                                              useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).labelLargeFamily),
                                                                             ),
                                                                       ),
                                                                     ),
@@ -339,9 +354,10 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                       columnNewsRow.longText!,
                                                                                       textAlign: TextAlign.justify,
                                                                                       style: FlutterFlowTheme.of(context).labelMedium.override(
-                                                                                            fontFamily: 'Epilogue',
+                                                                                            fontFamily: FlutterFlowTheme.of(context).labelMediumFamily,
                                                                                             fontSize: 16.0,
                                                                                             fontWeight: FontWeight.normal,
+                                                                                            useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).labelMediumFamily),
                                                                                             lineHeight: 1.4,
                                                                                           ),
                                                                                     ),
@@ -418,8 +434,16 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Epilogue',
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMediumFamily,
                                                           fontSize: 12.0,
+                                                          useGoogleFonts: GoogleFonts
+                                                                  .asMap()
+                                                              .containsKey(
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMediumFamily),
                                                         ),
                                                   ),
                                                 ),
@@ -482,18 +506,20 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         labelStyle: FlutterFlowTheme.of(context)
                                                                             .bodyMedium
                                                                             .override(
-                                                                              fontFamily: 'Epilogue',
+                                                                              fontFamily: FlutterFlowTheme.of(context).bodyMediumFamily,
                                                                               color: FlutterFlowTheme.of(context).primaryText,
                                                                               fontSize: 12.0,
+                                                                              useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
                                                                             ),
                                                                         hintText:
                                                                             'ENTER YOUR EMAIL',
                                                                         hintStyle: FlutterFlowTheme.of(context)
                                                                             .bodyMedium
                                                                             .override(
-                                                                              fontFamily: 'Epilogue',
+                                                                              fontFamily: FlutterFlowTheme.of(context).bodyMediumFamily,
                                                                               color: FlutterFlowTheme.of(context).secondaryText,
                                                                               fontSize: 12.0,
+                                                                              useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
                                                                             ),
                                                                         enabledBorder:
                                                                             UnderlineInputBorder(
@@ -549,11 +575,13 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                           .bodyMedium
                                                                           .override(
                                                                             fontFamily:
-                                                                                'Epilogue',
+                                                                                FlutterFlowTheme.of(context).bodyMediumFamily,
                                                                             color:
                                                                                 FlutterFlowTheme.of(context).primaryText,
                                                                             fontSize:
                                                                                 12.0,
+                                                                            useGoogleFonts:
+                                                                                GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
                                                                           ),
                                                                       textAlign:
                                                                           TextAlign
@@ -608,8 +636,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                               Text(
                                                                             'You are signed up for the news!',
                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                  fontFamily: 'Epilogue',
+                                                                                  fontFamily: FlutterFlowTheme.of(context).bodyMediumFamily,
                                                                                   color: FlutterFlowTheme.of(context).primaryText,
+                                                                                  useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
                                                                                 ),
                                                                           ),
                                                                           duration:
@@ -626,9 +655,11 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                           .bodyMedium
                                                                           .override(
                                                                             fontFamily:
-                                                                                'Epilogue',
+                                                                                FlutterFlowTheme.of(context).bodyMediumFamily,
                                                                             fontSize:
                                                                                 12.0,
+                                                                            useGoogleFonts:
+                                                                                GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
                                                                           ),
                                                                     ),
                                                                   ),
@@ -657,9 +688,11 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         .bodyMedium
                                                                         .override(
                                                                           fontFamily:
-                                                                              'Epilogue',
+                                                                              FlutterFlowTheme.of(context).bodyMediumFamily,
                                                                           fontSize:
                                                                               12.0,
+                                                                          useGoogleFonts:
+                                                                              GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
                                                                         ),
                                                                   ),
                                                                 ),
@@ -715,8 +748,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                         if (!snapshot.hasData) {
                                                           return Center(
                                                             child: SizedBox(
-                                                              width: 50.0,
-                                                              height: 50.0,
+                                                              width: 30.0,
+                                                              height: 30.0,
                                                               child:
                                                                   CircularProgressIndicator(
                                                                 valueColor:
@@ -724,7 +757,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         Color>(
                                                                   FlutterFlowTheme.of(
                                                                           context)
-                                                                      .primary,
+                                                                      .accent4,
                                                                 ),
                                                               ),
                                                             ),
@@ -787,8 +820,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                               child: Text(
                                                                                 columnExhibitionsRow.dateRowDescription!,
                                                                                 style: FlutterFlowTheme.of(context).labelLarge.override(
-                                                                                      fontFamily: 'Epilogue',
+                                                                                      fontFamily: FlutterFlowTheme.of(context).labelLargeFamily,
                                                                                       color: FlutterFlowTheme.of(context).primaryText,
+                                                                                      useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).labelLargeFamily),
                                                                                     ),
                                                                               ),
                                                                             ),
@@ -927,9 +961,10 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                             columnExhibitionsRow.longText!,
                                                                                             textAlign: TextAlign.justify,
                                                                                             style: FlutterFlowTheme.of(context).labelMedium.override(
-                                                                                                  fontFamily: 'Epilogue',
+                                                                                                  fontFamily: FlutterFlowTheme.of(context).labelMediumFamily,
                                                                                                   fontSize: 16.0,
                                                                                                   fontWeight: FontWeight.normal,
+                                                                                                  useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).labelMediumFamily),
                                                                                                   lineHeight: 1.4,
                                                                                                 ),
                                                                                             minFontSize: 10.0,
@@ -1235,8 +1270,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                           style: FlutterFlowTheme.of(context)
                                                                               .labelMedium
                                                                               .override(
-                                                                                fontFamily: 'Epilogue',
+                                                                                fontFamily: FlutterFlowTheme.of(context).labelMediumFamily,
                                                                                 fontSize: 12.0,
+                                                                                useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).labelMediumFamily),
                                                                               ),
                                                                         ),
                                                                       ),
@@ -1294,7 +1330,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                             EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
-                                                                    20.0,
+                                                                    28.0,
                                                                     0.0,
                                                                     0.0),
                                                         child: Row(
@@ -1303,6 +1339,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                           mainAxisAlignment:
                                                               MainAxisAlignment
                                                                   .spaceBetween,
+                                                          crossAxisAlignment:
+                                                              CrossAxisAlignment
+                                                                  .start,
                                                           children: [
                                                             Column(
                                                               mainAxisSize:
@@ -1425,8 +1464,16 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Epilogue',
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMediumFamily,
                                                           fontSize: 12.0,
+                                                          useGoogleFonts: GoogleFonts
+                                                                  .asMap()
+                                                              .containsKey(
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMediumFamily),
                                                         ),
                                               ),
                                             ),
@@ -1487,11 +1534,13 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         .bodyMedium
                                                                         .override(
                                                                           fontFamily:
-                                                                              'Epilogue',
+                                                                              FlutterFlowTheme.of(context).bodyMediumFamily,
                                                                           color:
                                                                               FlutterFlowTheme.of(context).primaryText,
                                                                           fontSize:
                                                                               12.0,
+                                                                          useGoogleFonts:
+                                                                              GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
                                                                         ),
                                                                     hintText:
                                                                         'ENTER YOUR EMAIL',
@@ -1500,11 +1549,13 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         .bodyMedium
                                                                         .override(
                                                                           fontFamily:
-                                                                              'Epilogue',
+                                                                              FlutterFlowTheme.of(context).bodyMediumFamily,
                                                                           color:
                                                                               FlutterFlowTheme.of(context).secondaryText,
                                                                           fontSize:
                                                                               12.0,
+                                                                          useGoogleFonts:
+                                                                              GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
                                                                         ),
                                                                     enabledBorder:
                                                                         UnderlineInputBorder(
@@ -1564,11 +1615,13 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                       .bodyMedium
                                                                       .override(
                                                                         fontFamily:
-                                                                            'Epilogue',
+                                                                            FlutterFlowTheme.of(context).bodyMediumFamily,
                                                                         color: FlutterFlowTheme.of(context)
                                                                             .primaryText,
                                                                         fontSize:
                                                                             12.0,
+                                                                        useGoogleFonts:
+                                                                            GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
                                                                       ),
                                                                   textAlign:
                                                                       TextAlign
@@ -1623,8 +1676,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         style: FlutterFlowTheme.of(context)
                                                                             .bodyMedium
                                                                             .override(
-                                                                              fontFamily: 'Epilogue',
+                                                                              fontFamily: FlutterFlowTheme.of(context).bodyMediumFamily,
                                                                               color: FlutterFlowTheme.of(context).primaryText,
+                                                                              useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
                                                                             ),
                                                                       ),
                                                                       duration: Duration(
@@ -1643,9 +1697,11 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                       .bodyMedium
                                                                       .override(
                                                                         fontFamily:
-                                                                            'Epilogue',
+                                                                            FlutterFlowTheme.of(context).bodyMediumFamily,
                                                                         fontSize:
                                                                             12.0,
+                                                                        useGoogleFonts:
+                                                                            GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
                                                                       ),
                                                                 ),
                                                               ),
@@ -1674,9 +1730,14 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                     .bodyMedium
                                                                     .override(
                                                                       fontFamily:
-                                                                          'Epilogue',
+                                                                          FlutterFlowTheme.of(context)
+                                                                              .bodyMediumFamily,
                                                                       fontSize:
                                                                           12.0,
+                                                                      useGoogleFonts: GoogleFonts
+                                                                              .asMap()
+                                                                          .containsKey(
+                                                                              FlutterFlowTheme.of(context).bodyMediumFamily),
                                                                     ),
                                                               ),
                                                             ),
@@ -1735,8 +1796,16 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Epilogue',
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMediumFamily,
                                                           fontSize: 12.0,
+                                                          useGoogleFonts: GoogleFonts
+                                                                  .asMap()
+                                                              .containsKey(
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMediumFamily),
                                                         ),
                                               ),
                                             ),
@@ -1797,11 +1866,13 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         .bodyMedium
                                                                         .override(
                                                                           fontFamily:
-                                                                              'Epilogue',
+                                                                              FlutterFlowTheme.of(context).bodyMediumFamily,
                                                                           color:
                                                                               FlutterFlowTheme.of(context).primaryText,
                                                                           fontSize:
                                                                               12.0,
+                                                                          useGoogleFonts:
+                                                                              GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
                                                                         ),
                                                                     hintText:
                                                                         'ENTER YOUR EMAIL',
@@ -1810,11 +1881,13 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         .bodyMedium
                                                                         .override(
                                                                           fontFamily:
-                                                                              'Epilogue',
+                                                                              FlutterFlowTheme.of(context).bodyMediumFamily,
                                                                           color:
                                                                               FlutterFlowTheme.of(context).secondaryText,
                                                                           fontSize:
                                                                               12.0,
+                                                                          useGoogleFonts:
+                                                                              GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
                                                                         ),
                                                                     enabledBorder:
                                                                         UnderlineInputBorder(
@@ -1874,11 +1947,13 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                       .bodyMedium
                                                                       .override(
                                                                         fontFamily:
-                                                                            'Epilogue',
+                                                                            FlutterFlowTheme.of(context).bodyMediumFamily,
                                                                         color: FlutterFlowTheme.of(context)
                                                                             .primaryText,
                                                                         fontSize:
                                                                             12.0,
+                                                                        useGoogleFonts:
+                                                                            GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
                                                                       ),
                                                                   textAlign:
                                                                       TextAlign
@@ -1933,8 +2008,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         style: FlutterFlowTheme.of(context)
                                                                             .bodyMedium
                                                                             .override(
-                                                                              fontFamily: 'Epilogue',
+                                                                              fontFamily: FlutterFlowTheme.of(context).bodyMediumFamily,
                                                                               color: FlutterFlowTheme.of(context).primaryText,
+                                                                              useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
                                                                             ),
                                                                       ),
                                                                       duration: Duration(
@@ -1953,9 +2029,11 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                       .bodyMedium
                                                                       .override(
                                                                         fontFamily:
-                                                                            'Epilogue',
+                                                                            FlutterFlowTheme.of(context).bodyMediumFamily,
                                                                         fontSize:
                                                                             12.0,
+                                                                        useGoogleFonts:
+                                                                            GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
                                                                       ),
                                                                 ),
                                                               ),
@@ -1984,9 +2062,14 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                     .bodyMedium
                                                                     .override(
                                                                       fontFamily:
-                                                                          'Epilogue',
+                                                                          FlutterFlowTheme.of(context)
+                                                                              .bodyMediumFamily,
                                                                       fontSize:
                                                                           12.0,
+                                                                      useGoogleFonts: GoogleFonts
+                                                                              .asMap()
+                                                                          .containsKey(
+                                                                              FlutterFlowTheme.of(context).bodyMediumFamily),
                                                                     ),
                                                               ),
                                                             ),
@@ -2081,9 +2164,11 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         .bodyMedium
                                                                         .override(
                                                                           fontFamily:
-                                                                              'Epilogue',
+                                                                              FlutterFlowTheme.of(context).bodyMediumFamily,
                                                                           color:
                                                                               FlutterFlowTheme.of(context).primaryText,
+                                                                          useGoogleFonts:
+                                                                              GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
                                                                         ),
                                                                     hintText:
                                                                         'ENTER YOUR EMAIL',
@@ -2092,9 +2177,11 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         .bodyMedium
                                                                         .override(
                                                                           fontFamily:
-                                                                              'Epilogue',
+                                                                              FlutterFlowTheme.of(context).bodyMediumFamily,
                                                                           color:
                                                                               FlutterFlowTheme.of(context).secondaryText,
+                                                                          useGoogleFonts:
+                                                                              GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
                                                                         ),
                                                                     enabledBorder:
                                                                         UnderlineInputBorder(
@@ -2154,9 +2241,11 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                       .bodyMedium
                                                                       .override(
                                                                         fontFamily:
-                                                                            'Epilogue',
+                                                                            FlutterFlowTheme.of(context).bodyMediumFamily,
                                                                         color: FlutterFlowTheme.of(context)
                                                                             .primaryText,
+                                                                        useGoogleFonts:
+                                                                            GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
                                                                       ),
                                                                   textAlign:
                                                                       TextAlign
@@ -2211,9 +2300,11 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                           .bodyMedium
                                                                           .override(
                                                                             fontFamily:
-                                                                                'Epilogue',
+                                                                                FlutterFlowTheme.of(context).bodyMediumFamily,
                                                                             color:
                                                                                 FlutterFlowTheme.of(context).primaryText,
+                                                                            useGoogleFonts:
+                                                                                GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
                                                                           ),
                                                                     ),
                                                                     duration: Duration(
@@ -2308,10 +2399,18 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                         .titleLarge
                                                         .override(
                                                           fontFamily:
-                                                              'Epilogue',
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .titleLargeFamily,
                                                           fontSize: 20.0,
                                                           fontWeight:
                                                               FontWeight.normal,
+                                                          useGoogleFonts: GoogleFonts
+                                                                  .asMap()
+                                                              .containsKey(
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .titleLargeFamily),
                                                         ),
                                                   )
                                                 ],

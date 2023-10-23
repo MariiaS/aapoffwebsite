@@ -22,6 +22,8 @@ class HomePageModel extends FlutterFlowModel<HomePageWidget> {
 
   ExhibitionsRow? exhibitionRef;
 
+  OtherRow? otherRef;
+
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
