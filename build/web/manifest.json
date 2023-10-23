@@ -1,0 +1,16 @@
+{
+  "name": "My Flutter Web App",
+  "short_name": "Flutter App",
+  "description": "Description of your app",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

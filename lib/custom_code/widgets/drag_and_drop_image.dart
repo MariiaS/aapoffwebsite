@@ -96,6 +96,7 @@ class _DragAndDropImageState extends State<DragAndDropImage> {
               setState(() {
                 position = Offset(offset.dx, offset.dy - 88.0);
               });
+              _loadRandomImage(); // Load a new random image after dragging
             },
             child: Image.asset(
               _randomImage,
