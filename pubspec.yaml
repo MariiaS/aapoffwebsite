@@ -28,6 +28,7 @@ dependencies:
   app_links: 3.4.1
   auto_size_text: 3.0.0
   cached_network_image: 3.2.1
+  carousel_slider: 4.2.1
   flutter_animate: 4.1.1+1
   flutter_cache_manager: 3.3.0
   font_awesome_flutter: 10.1.0

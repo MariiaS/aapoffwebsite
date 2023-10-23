@@ -36,4 +36,9 @@ class ExhibitionsRow extends SupabaseDataRow {
 
   String? get videoUrl => getField<String>('video_url');
   set videoUrl(String? value) => setField<String>('video_url', value);
+
+  List<String> get imageDescriptionList =>
+      getListField<String>('image_description_list');
+  set imageDescriptionList(List<String>? value) =>
+      setListField<String>('image_description_list', value);
 }
