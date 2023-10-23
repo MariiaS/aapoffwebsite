@@ -367,7 +367,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                             height:
                                                                                 500.0,
                                                                             fit:
-                                                                                BoxFit.cover,
+                                                                                BoxFit.fitHeight,
                                                                           ),
                                                                         ),
                                                                       ),
@@ -825,7 +825,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                               imageUrl: columnExhibitionsRow.imageList.first,
                                                                               width: MediaQuery.sizeOf(context).width * 1.0,
                                                                               height: 500.0,
-                                                                              fit: BoxFit.cover,
+                                                                              fit: BoxFit.fitHeight,
                                                                             ),
                                                                           ),
                                                                         ),
