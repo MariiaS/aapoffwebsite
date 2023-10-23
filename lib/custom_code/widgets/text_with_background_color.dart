@@ -41,7 +41,7 @@ class _TextWithBackgroundColorState extends State<TextWithBackgroundColor> {
             left: 0,
             child: Container(
               height: widget.highlightHeight,
-              width: (widget.text.length * 22)
+              width: (widget.text.length * 20)
                   .toDouble(), // Adjust the multiplier based on your font size and style
               color: FlutterFlowTheme.of(context).alternate,
             ),
