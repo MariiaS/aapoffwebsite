@@ -44,6 +44,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
     _model.textFieldFocusNode2 ??= FocusNode();
     _model.textController3 ??= TextEditingController();
     _model.textFieldFocusNode3 ??= FocusNode();
+    _model.textController4 ??= TextEditingController();
+    _model.textFieldFocusNode4 ??= FocusNode();
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
@@ -367,7 +369,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                             height:
                                                                                 500.0,
                                                                             fit:
-                                                                                BoxFit.fitHeight,
+                                                                                BoxFit.cover,
                                                                           ),
                                                                         ),
                                                                       ),
@@ -395,7 +397,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                       ),
                                       Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 12.0, 0.0, 12.0),
+                                            0.0, 10.0, 0.0, 10.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
                                           mainAxisAlignment:
@@ -412,7 +414,11 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                   'AAPO NIKKANEN',
                                                   style: FlutterFlowTheme.of(
                                                           context)
-                                                      .bodyMedium,
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily: 'Epilogue',
+                                                        fontSize: 12.0,
+                                                      ),
                                                 ),
                                               ),
                                             ),
@@ -478,6 +484,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                 'Epilogue',
                                                                             color:
                                                                                 FlutterFlowTheme.of(context).primaryText,
+                                                                            fontSize:
+                                                                                12.0,
                                                                           ),
                                                                       hintText:
                                                                           'ENTER YOUR EMAIL',
@@ -489,6 +497,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                 'Epilogue',
                                                                             color:
                                                                                 FlutterFlowTheme.of(context).secondaryText,
+                                                                            fontSize:
+                                                                                12.0,
                                                                           ),
                                                                       enabledBorder:
                                                                           UnderlineInputBorder(
@@ -547,6 +557,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                               'Epilogue',
                                                                           color:
                                                                               FlutterFlowTheme.of(context).primaryText,
+                                                                          fontSize:
+                                                                              12.0,
                                                                         ),
                                                                     textAlign:
                                                                         TextAlign
@@ -561,56 +573,70 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                   ),
                                                                 ),
                                                               ),
-                                                              InkWell(
-                                                                splashColor: Colors
-                                                                    .transparent,
-                                                                focusColor: Colors
-                                                                    .transparent,
-                                                                hoverColor: Colors
-                                                                    .transparent,
-                                                                highlightColor:
-                                                                    Colors
-                                                                        .transparent,
-                                                                onTap:
-                                                                    () async {
-                                                                  await launchUrl(Uri(
-                                                                      scheme: 'mailto',
-                                                                      path: 'mayyouseethesun@gmail.com',
-                                                                      query: {
-                                                                        'subject':
-                                                                            'This person would like to subscribe to your email!',
-                                                                        'body': _model
-                                                                            .textController1
-                                                                            .text,
-                                                                      }.entries.map((MapEntry<String, String> e) => '${Uri.encodeComponent(e.key)}=${Uri.encodeComponent(e.value)}').join('&')));
-                                                                  ScaffoldMessenger.of(
-                                                                          context)
-                                                                      .showSnackBar(
-                                                                    SnackBar(
-                                                                      content:
-                                                                          Text(
-                                                                        'You are signed up for the news!',
-                                                                        style: FlutterFlowTheme.of(context)
-                                                                            .bodyMedium
-                                                                            .override(
-                                                                              fontFamily: 'Epilogue',
-                                                                              color: FlutterFlowTheme.of(context).primaryText,
-                                                                            ),
+                                                              Padding(
+                                                                padding:
+                                                                    EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            0.0,
+                                                                            0.0,
+                                                                            0.0,
+                                                                            2.0),
+                                                                child: InkWell(
+                                                                  splashColor:
+                                                                      Colors
+                                                                          .transparent,
+                                                                  focusColor: Colors
+                                                                      .transparent,
+                                                                  hoverColor: Colors
+                                                                      .transparent,
+                                                                  highlightColor:
+                                                                      Colors
+                                                                          .transparent,
+                                                                  onTap:
+                                                                      () async {
+                                                                    await launchUrl(Uri(
+                                                                        scheme: 'mailto',
+                                                                        path: 'mayyouseethesun@gmail.com',
+                                                                        query: {
+                                                                          'subject':
+                                                                              'This person would like to subscribe to your email!',
+                                                                          'body': _model
+                                                                              .textController1
+                                                                              .text,
+                                                                        }.entries.map((MapEntry<String, String> e) => '${Uri.encodeComponent(e.key)}=${Uri.encodeComponent(e.value)}').join('&')));
+                                                                    ScaffoldMessenger.of(
+                                                                            context)
+                                                                        .showSnackBar(
+                                                                      SnackBar(
+                                                                        content:
+                                                                            Text(
+                                                                          'You are signed up for the news!',
+                                                                          style: FlutterFlowTheme.of(context)
+                                                                              .bodyMedium
+                                                                              .override(
+                                                                                fontFamily: 'Epilogue',
+                                                                                color: FlutterFlowTheme.of(context).primaryText,
+                                                                              ),
+                                                                        ),
+                                                                        duration:
+                                                                            Duration(milliseconds: 4000),
+                                                                        backgroundColor:
+                                                                            FlutterFlowTheme.of(context).alternate,
                                                                       ),
-                                                                      duration: Duration(
-                                                                          milliseconds:
-                                                                              4000),
-                                                                      backgroundColor:
-                                                                          FlutterFlowTheme.of(context)
-                                                                              .alternate,
-                                                                    ),
-                                                                  );
-                                                                },
-                                                                child: Text(
-                                                                  'SIGN UP',
-                                                                  style: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium,
+                                                                    );
+                                                                  },
+                                                                  child: Text(
+                                                                    'SIGN UP',
+                                                                    style: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodyMedium
+                                                                        .override(
+                                                                          fontFamily:
+                                                                              'Epilogue',
+                                                                          fontSize:
+                                                                              12.0,
+                                                                        ),
+                                                                  ),
                                                                 ),
                                                               ),
                                                             ],
@@ -635,7 +661,13 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                   'NEWSLETTER',
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
-                                                                      .bodyMedium,
+                                                                      .bodyMedium
+                                                                      .override(
+                                                                        fontFamily:
+                                                                            'Epilogue',
+                                                                        fontSize:
+                                                                            12.0,
+                                                                      ),
                                                                 ),
                                                               ),
                                                               SizedBox(
@@ -808,24 +840,28 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                     children: [
                                                                       Flexible(
                                                                         child:
-                                                                            Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
-                                                                              0.0,
-                                                                              6.0,
-                                                                              0.0,
-                                                                              0.0),
+                                                                            Align(
+                                                                          alignment: AlignmentDirectional(
+                                                                              1.00,
+                                                                              0.00),
                                                                           child:
-                                                                              ClipRRect(
-                                                                            borderRadius:
-                                                                                BorderRadius.circular(0.0),
+                                                                              Padding(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                                0.0,
+                                                                                6.0,
+                                                                                0.0,
+                                                                                0.0),
                                                                             child:
-                                                                                CachedNetworkImage(
-                                                                              fadeInDuration: Duration(milliseconds: 500),
-                                                                              fadeOutDuration: Duration(milliseconds: 500),
-                                                                              imageUrl: columnExhibitionsRow.imageList.first,
-                                                                              width: MediaQuery.sizeOf(context).width * 1.0,
-                                                                              height: 500.0,
-                                                                              fit: BoxFit.fitHeight,
+                                                                                ClipRRect(
+                                                                              borderRadius: BorderRadius.circular(0.0),
+                                                                              child: CachedNetworkImage(
+                                                                                fadeInDuration: Duration(milliseconds: 500),
+                                                                                fadeOutDuration: Duration(milliseconds: 500),
+                                                                                imageUrl: columnExhibitionsRow.imageList.first,
+                                                                                width: MediaQuery.sizeOf(context).width * 1.0,
+                                                                                height: 500.0,
+                                                                                fit: BoxFit.fitHeight,
+                                                                              ),
                                                                             ),
                                                                           ),
                                                                         ),
@@ -957,8 +993,35 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                       MediaQuery.sizeOf(context)
                                                               .height *
                                                           1.0,
+                                                  image:
+                                                      'assets/images/pin_26.png',
                                                   positionX: 100.0,
                                                   positionY: 300.0,
+                                                ),
+                                              ),
+                                              Container(
+                                                width:
+                                                    MediaQuery.sizeOf(context)
+                                                            .width *
+                                                        1.0,
+                                                height:
+                                                    MediaQuery.sizeOf(context)
+                                                            .height *
+                                                        1.0,
+                                                child: custom_widgets
+                                                    .DragAndDropImage(
+                                                  width:
+                                                      MediaQuery.sizeOf(context)
+                                                              .width *
+                                                          1.0,
+                                                  height:
+                                                      MediaQuery.sizeOf(context)
+                                                              .height *
+                                                          1.0,
+                                                  image:
+                                                      'assets/images/pin_26.png',
+                                                  positionX: 1200.0,
+                                                  positionY: 400.0,
                                                 ),
                                               ),
                                             ],
@@ -986,7 +1049,11 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                               'AAPO NIKKANEN',
                                               style:
                                                   FlutterFlowTheme.of(context)
-                                                      .bodyMedium,
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily: 'Epilogue',
+                                                        fontSize: 12.0,
+                                                      ),
                                             ),
                                           ),
                                         ),
@@ -1048,6 +1115,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                             'Epilogue',
                                                                         color: FlutterFlowTheme.of(context)
                                                                             .primaryText,
+                                                                        fontSize:
+                                                                            12.0,
                                                                       ),
                                                                   hintText:
                                                                       'ENTER YOUR EMAIL',
@@ -1059,6 +1128,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                             'Epilogue',
                                                                         color: FlutterFlowTheme.of(context)
                                                                             .secondaryText,
+                                                                        fontSize:
+                                                                            12.0,
                                                                       ),
                                                                   enabledBorder:
                                                                       UnderlineInputBorder(
@@ -1126,6 +1197,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                       color: FlutterFlowTheme.of(
                                                                               context)
                                                                           .primaryText,
+                                                                      fontSize:
+                                                                          12.0,
                                                                     ),
                                                                 textAlign:
                                                                     TextAlign
@@ -1140,66 +1213,80 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                               ),
                                                             ),
                                                           ),
-                                                          InkWell(
-                                                            splashColor: Colors
-                                                                .transparent,
-                                                            focusColor: Colors
-                                                                .transparent,
-                                                            hoverColor: Colors
-                                                                .transparent,
-                                                            highlightColor:
-                                                                Colors
-                                                                    .transparent,
-                                                            onTap: () async {
-                                                              await launchUrl(
-                                                                  Uri(
-                                                                      scheme:
-                                                                          'mailto',
-                                                                      path:
-                                                                          'mayyouseethesun@gmail.com',
-                                                                      query: {
-                                                                        'subject':
-                                                                            'This person would like to subscribe to your email!',
-                                                                        'body': _model
-                                                                            .textController2
-                                                                            .text,
-                                                                      }
-                                                                          .entries
-                                                                          .map((MapEntry<String, String> e) =>
-                                                                              '${Uri.encodeComponent(e.key)}=${Uri.encodeComponent(e.value)}')
-                                                                          .join(
-                                                                              '&')));
-                                                              ScaffoldMessenger
-                                                                      .of(context)
-                                                                  .showSnackBar(
-                                                                SnackBar(
-                                                                  content: Text(
-                                                                    'You are signed up for the news!',
-                                                                    style: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .bodyMedium
-                                                                        .override(
-                                                                          fontFamily:
-                                                                              'Epilogue',
-                                                                          color:
-                                                                              FlutterFlowTheme.of(context).primaryText,
-                                                                        ),
-                                                                  ),
-                                                                  duration: Duration(
-                                                                      milliseconds:
-                                                                          4000),
-                                                                  backgroundColor:
-                                                                      FlutterFlowTheme.of(
+                                                          Padding(
+                                                            padding:
+                                                                EdgeInsetsDirectional
+                                                                    .fromSTEB(
+                                                                        0.0,
+                                                                        0.0,
+                                                                        0.0,
+                                                                        2.0),
+                                                            child: InkWell(
+                                                              splashColor: Colors
+                                                                  .transparent,
+                                                              focusColor: Colors
+                                                                  .transparent,
+                                                              hoverColor: Colors
+                                                                  .transparent,
+                                                              highlightColor:
+                                                                  Colors
+                                                                      .transparent,
+                                                              onTap: () async {
+                                                                await launchUrl(
+                                                                    Uri(
+                                                                        scheme:
+                                                                            'mailto',
+                                                                        path:
+                                                                            'mayyouseethesun@gmail.com',
+                                                                        query: {
+                                                                          'subject':
+                                                                              'This person would like to subscribe to your email!',
+                                                                          'body': _model
+                                                                              .textController2
+                                                                              .text,
+                                                                        }
+                                                                            .entries
+                                                                            .map((MapEntry<String, String> e) =>
+                                                                                '${Uri.encodeComponent(e.key)}=${Uri.encodeComponent(e.value)}')
+                                                                            .join('&')));
+                                                                ScaffoldMessenger.of(
+                                                                        context)
+                                                                    .showSnackBar(
+                                                                  SnackBar(
+                                                                    content:
+                                                                        Text(
+                                                                      'You are signed up for the news!',
+                                                                      style: FlutterFlowTheme.of(
                                                                               context)
-                                                                          .alternate,
-                                                                ),
-                                                              );
-                                                            },
-                                                            child: Text(
-                                                              'SIGN UP',
-                                                              style: FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .bodyMedium,
+                                                                          .bodyMedium
+                                                                          .override(
+                                                                            fontFamily:
+                                                                                'Epilogue',
+                                                                            color:
+                                                                                FlutterFlowTheme.of(context).primaryText,
+                                                                          ),
+                                                                    ),
+                                                                    duration: Duration(
+                                                                        milliseconds:
+                                                                            4000),
+                                                                    backgroundColor:
+                                                                        FlutterFlowTheme.of(context)
+                                                                            .alternate,
+                                                                  ),
+                                                                );
+                                                              },
+                                                              child: Text(
+                                                                'SIGN UP',
+                                                                style: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .override(
+                                                                      fontFamily:
+                                                                          'Epilogue',
+                                                                      fontSize:
+                                                                          12.0,
+                                                                    ),
+                                                              ),
                                                             ),
                                                           ),
                                                         ],
@@ -1223,7 +1310,13 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                               'NEWSLETTER',
                                                               style: FlutterFlowTheme
                                                                       .of(context)
-                                                                  .bodyMedium,
+                                                                  .bodyMedium
+                                                                  .override(
+                                                                    fontFamily:
+                                                                        'Epilogue',
+                                                                    fontSize:
+                                                                        12.0,
+                                                                  ),
                                                             ),
                                                           ),
                                                           SizedBox(
@@ -1249,9 +1342,327 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                   ),
                                 ],
                               ),
-                              Text(
-                                'The structure of this page is identical to Exhibitions',
-                                style: FlutterFlowTheme.of(context).bodyMedium,
+                              Column(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    'The structure of this page is identical to Exhibitions',
+                                    style:
+                                        FlutterFlowTheme.of(context).bodyMedium,
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 10.0, 0.0, 10.0),
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Expanded(
+                                          child: Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    24.0, 0.0, 0.0, 0.0),
+                                            child: Text(
+                                              'AAPO NIKKANEN',
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily: 'Epilogue',
+                                                        fontSize: 12.0,
+                                                      ),
+                                            ),
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  0.0, 0.0, 24.0, 0.0),
+                                          child: Column(
+                                            mainAxisSize: MainAxisSize.max,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.end,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Align(
+                                                alignment: AlignmentDirectional(
+                                                    -1.00, -1.00),
+                                                child: Container(
+                                                  height: 32.0,
+                                                  child: Stack(
+                                                    children: [
+                                                      Row(
+                                                        mainAxisSize:
+                                                            MainAxisSize.max,
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .spaceBetween,
+                                                        crossAxisAlignment:
+                                                            CrossAxisAlignment
+                                                                .end,
+                                                        children: [
+                                                          Container(
+                                                            width: 328.0,
+                                                            decoration:
+                                                                BoxDecoration(),
+                                                            child: Align(
+                                                              alignment:
+                                                                  AlignmentDirectional(
+                                                                      0.00,
+                                                                      0.00),
+                                                              child:
+                                                                  TextFormField(
+                                                                controller: _model
+                                                                    .textController3,
+                                                                focusNode: _model
+                                                                    .textFieldFocusNode3,
+                                                                textCapitalization:
+                                                                    TextCapitalization
+                                                                        .characters,
+                                                                obscureText:
+                                                                    false,
+                                                                decoration:
+                                                                    InputDecoration(
+                                                                  labelStyle: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .override(
+                                                                        fontFamily:
+                                                                            'Epilogue',
+                                                                        color: FlutterFlowTheme.of(context)
+                                                                            .primaryText,
+                                                                        fontSize:
+                                                                            12.0,
+                                                                      ),
+                                                                  hintText:
+                                                                      'ENTER YOUR EMAIL',
+                                                                  hintStyle: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .override(
+                                                                        fontFamily:
+                                                                            'Epilogue',
+                                                                        color: FlutterFlowTheme.of(context)
+                                                                            .secondaryText,
+                                                                        fontSize:
+                                                                            12.0,
+                                                                      ),
+                                                                  enabledBorder:
+                                                                      UnderlineInputBorder(
+                                                                    borderSide:
+                                                                        BorderSide(
+                                                                      color: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .primary,
+                                                                      width:
+                                                                          1.0,
+                                                                    ),
+                                                                    borderRadius:
+                                                                        BorderRadius.circular(
+                                                                            0.0),
+                                                                  ),
+                                                                  focusedBorder:
+                                                                      UnderlineInputBorder(
+                                                                    borderSide:
+                                                                        BorderSide(
+                                                                      color: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .primary,
+                                                                      width:
+                                                                          1.0,
+                                                                    ),
+                                                                    borderRadius:
+                                                                        BorderRadius.circular(
+                                                                            0.0),
+                                                                  ),
+                                                                  errorBorder:
+                                                                      UnderlineInputBorder(
+                                                                    borderSide:
+                                                                        BorderSide(
+                                                                      color: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .error,
+                                                                      width:
+                                                                          1.0,
+                                                                    ),
+                                                                    borderRadius:
+                                                                        BorderRadius.circular(
+                                                                            0.0),
+                                                                  ),
+                                                                  focusedErrorBorder:
+                                                                      UnderlineInputBorder(
+                                                                    borderSide:
+                                                                        BorderSide(
+                                                                      color: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .error,
+                                                                      width:
+                                                                          1.0,
+                                                                    ),
+                                                                    borderRadius:
+                                                                        BorderRadius.circular(
+                                                                            0.0),
+                                                                  ),
+                                                                ),
+                                                                style: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .override(
+                                                                      fontFamily:
+                                                                          'Epilogue',
+                                                                      color: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .primaryText,
+                                                                      fontSize:
+                                                                          12.0,
+                                                                    ),
+                                                                textAlign:
+                                                                    TextAlign
+                                                                        .start,
+                                                                keyboardType:
+                                                                    TextInputType
+                                                                        .emailAddress,
+                                                                validator: _model
+                                                                    .textController3Validator
+                                                                    .asValidator(
+                                                                        context),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          Padding(
+                                                            padding:
+                                                                EdgeInsetsDirectional
+                                                                    .fromSTEB(
+                                                                        0.0,
+                                                                        0.0,
+                                                                        0.0,
+                                                                        2.0),
+                                                            child: InkWell(
+                                                              splashColor: Colors
+                                                                  .transparent,
+                                                              focusColor: Colors
+                                                                  .transparent,
+                                                              hoverColor: Colors
+                                                                  .transparent,
+                                                              highlightColor:
+                                                                  Colors
+                                                                      .transparent,
+                                                              onTap: () async {
+                                                                await launchUrl(
+                                                                    Uri(
+                                                                        scheme:
+                                                                            'mailto',
+                                                                        path:
+                                                                            'mayyouseethesun@gmail.com',
+                                                                        query: {
+                                                                          'subject':
+                                                                              'This person would like to subscribe to your email!',
+                                                                          'body': _model
+                                                                              .textController3
+                                                                              .text,
+                                                                        }
+                                                                            .entries
+                                                                            .map((MapEntry<String, String> e) =>
+                                                                                '${Uri.encodeComponent(e.key)}=${Uri.encodeComponent(e.value)}')
+                                                                            .join('&')));
+                                                                ScaffoldMessenger.of(
+                                                                        context)
+                                                                    .showSnackBar(
+                                                                  SnackBar(
+                                                                    content:
+                                                                        Text(
+                                                                      'You are signed up for the news!',
+                                                                      style: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyMedium
+                                                                          .override(
+                                                                            fontFamily:
+                                                                                'Epilogue',
+                                                                            color:
+                                                                                FlutterFlowTheme.of(context).primaryText,
+                                                                          ),
+                                                                    ),
+                                                                    duration: Duration(
+                                                                        milliseconds:
+                                                                            4000),
+                                                                    backgroundColor:
+                                                                        FlutterFlowTheme.of(context)
+                                                                            .alternate,
+                                                                  ),
+                                                                );
+                                                              },
+                                                              child: Text(
+                                                                'SIGN UP',
+                                                                style: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .override(
+                                                                      fontFamily:
+                                                                          'Epilogue',
+                                                                      fontSize:
+                                                                          12.0,
+                                                                    ),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        ],
+                                                      ),
+                                                      Column(
+                                                        mainAxisSize:
+                                                            MainAxisSize.max,
+                                                        crossAxisAlignment:
+                                                            CrossAxisAlignment
+                                                                .start,
+                                                        children: [
+                                                          Padding(
+                                                            padding:
+                                                                EdgeInsetsDirectional
+                                                                    .fromSTEB(
+                                                                        0.0,
+                                                                        0.0,
+                                                                        0.0,
+                                                                        8.0),
+                                                            child: Text(
+                                                              'NEWSLETTER',
+                                                              style: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .bodyMedium
+                                                                  .override(
+                                                                    fontFamily:
+                                                                        'Epilogue',
+                                                                    fontSize:
+                                                                        12.0,
+                                                                  ),
+                                                            ),
+                                                          ),
+                                                          SizedBox(
+                                                            width: 380.0,
+                                                            child: Divider(
+                                                              thickness: 0.5,
+                                                              color: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .primaryText,
+                                                            ),
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
                               ),
                               Stack(
                                 children: [
@@ -1305,9 +1716,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                               child:
                                                                   TextFormField(
                                                                 controller: _model
-                                                                    .textController3,
+                                                                    .textController4,
                                                                 focusNode: _model
-                                                                    .textFieldFocusNode3,
+                                                                    .textFieldFocusNode4,
                                                                 textCapitalization:
                                                                     TextCapitalization
                                                                         .characters,
@@ -1409,7 +1820,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                     TextInputType
                                                                         .emailAddress,
                                                                 validator: _model
-                                                                    .textController3Validator
+                                                                    .textController4Validator
                                                                     .asValidator(
                                                                         context),
                                                               ),
@@ -1436,7 +1847,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         'subject':
                                                                             'This person would like to subscribe to your email!',
                                                                         'body': _model
-                                                                            .textController3
+                                                                            .textController4
                                                                             .text,
                                                                       }
                                                                           .entries
@@ -1589,6 +2000,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                       height:
                                           MediaQuery.sizeOf(context).height *
                                               1.0,
+                                      image: 'assets/images/pin_26.png',
                                       positionX: 200.0,
                                       positionY: 20.0,
                                     ),
@@ -1604,6 +2016,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                       height:
                                           MediaQuery.sizeOf(context).height *
                                               1.0,
+                                      image: 'assets/images/pin_26.png',
                                       positionX: 50.0,
                                       positionY: 250.0,
                                     ),
@@ -1619,6 +2032,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                       height:
                                           MediaQuery.sizeOf(context).height *
                                               1.0,
+                                      image: 'assets/images/pin_26.png',
                                       positionX: 300.0,
                                       positionY: 280.0,
                                     ),
@@ -1634,6 +2048,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                       height:
                                           MediaQuery.sizeOf(context).height *
                                               1.0,
+                                      image: 'assets/images/pin_26.png',
                                       positionX: 500.0,
                                       positionY: 100.0,
                                     ),
