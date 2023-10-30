@@ -37,12 +37,19 @@ class HomePageModel extends FlutterFlowModel<HomePageWidget> {
   // Model for SubscriptionWidget component.
   late SubscriptionWidgetModel subscriptionWidgetModel1;
   // State field(s) for Carousel widget.
-  CarouselController? carouselController;
+  CarouselController? carouselController1;
 
-  int carouselCurrentIndex = 1;
+  int carouselCurrentIndex1 = 2;
 
   // Model for SubscriptionWidget component.
   late SubscriptionWidgetModel subscriptionWidgetModel2;
+  // State field(s) for Carousel widget.
+  CarouselController? carouselController2;
+
+  int carouselCurrentIndex2 = 2;
+
+  // Model for SubscriptionWidget component.
+  late SubscriptionWidgetModel subscriptionWidgetModel3;
   // State field(s) for TextField widget.
   FocusNode? textFieldFocusNode;
   TextEditingController? textController;
@@ -55,6 +62,8 @@ class HomePageModel extends FlutterFlowModel<HomePageWidget> {
         createModel(context, () => SubscriptionWidgetModel());
     subscriptionWidgetModel2 =
         createModel(context, () => SubscriptionWidgetModel());
+    subscriptionWidgetModel3 =
+        createModel(context, () => SubscriptionWidgetModel());
   }
 
   void dispose() {
@@ -62,6 +71,7 @@ class HomePageModel extends FlutterFlowModel<HomePageWidget> {
     tabBarController?.dispose();
     subscriptionWidgetModel1.dispose();
     subscriptionWidgetModel2.dispose();
+    subscriptionWidgetModel3.dispose();
     textFieldFocusNode?.dispose();
     textController?.dispose();
   }

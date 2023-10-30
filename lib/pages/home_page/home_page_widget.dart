@@ -82,7 +82,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                   alignment: AlignmentDirectional(0.00, 0.00),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
                     child: InkWell(
                       splashColor: Colors.transparent,
                       focusColor: Colors.transparent,
@@ -535,57 +535,60 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                       CrossAxisAlignment
                                                                           .start,
                                                                   children: [
-                                                                    Expanded(
-                                                                      child:
-                                                                          Align(
-                                                                        alignment: AlignmentDirectional(
-                                                                            0.00,
-                                                                            -1.00),
+                                                                    if (responsiveVisibility(
+                                                                      context:
+                                                                          context,
+                                                                      phone:
+                                                                          false,
+                                                                    ))
+                                                                      Expanded(
                                                                         child:
-                                                                            Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
-                                                                              20.0,
-                                                                              10.0,
-                                                                              0.0,
-                                                                              0.0),
+                                                                            Align(
+                                                                          alignment: AlignmentDirectional(
+                                                                              0.00,
+                                                                              -1.00),
                                                                           child:
-                                                                              Column(
-                                                                            mainAxisSize:
-                                                                                MainAxisSize.max,
-                                                                            mainAxisAlignment:
-                                                                                MainAxisAlignment.spaceBetween,
-                                                                            crossAxisAlignment:
-                                                                                CrossAxisAlignment.start,
-                                                                            children: [
-                                                                              Align(
-                                                                                alignment: AlignmentDirectional(-1.00, 0.00),
-                                                                                child: Container(
-                                                                                  decoration: BoxDecoration(
-                                                                                    color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                                                  ),
-                                                                                  child: Text(
-                                                                                    columnExhibitionsRow.dateRowDescription!,
-                                                                                    style: FlutterFlowTheme.of(context).labelLarge.override(
-                                                                                          fontFamily: FlutterFlowTheme.of(context).labelLargeFamily,
-                                                                                          color: FlutterFlowTheme.of(context).primaryText,
-                                                                                          useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).labelLargeFamily),
-                                                                                        ),
+                                                                              Padding(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                                20.0,
+                                                                                10.0,
+                                                                                0.0,
+                                                                                0.0),
+                                                                            child:
+                                                                                Column(
+                                                                              mainAxisSize: MainAxisSize.max,
+                                                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                                                              children: [
+                                                                                Align(
+                                                                                  alignment: AlignmentDirectional(-1.00, 0.00),
+                                                                                  child: Container(
+                                                                                    decoration: BoxDecoration(
+                                                                                      color: FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                    ),
+                                                                                    child: Text(
+                                                                                      columnExhibitionsRow.dateRowDescription!,
+                                                                                      style: FlutterFlowTheme.of(context).labelLarge.override(
+                                                                                            fontFamily: FlutterFlowTheme.of(context).labelLargeFamily,
+                                                                                            color: FlutterFlowTheme.of(context).primaryText,
+                                                                                            useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).labelLargeFamily),
+                                                                                          ),
+                                                                                    ),
                                                                                   ),
                                                                                 ),
-                                                                              ),
-                                                                            ],
+                                                                              ],
+                                                                            ),
                                                                           ),
                                                                         ),
                                                                       ),
-                                                                    ),
                                                                     Expanded(
                                                                       flex: 2,
                                                                       child:
                                                                           Padding(
                                                                         padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            8.0,
                                                                             0.0,
-                                                                            0.0,
-                                                                            24.0,
+                                                                            8.0,
                                                                             0.0),
                                                                         child:
                                                                             Column(
@@ -599,23 +602,27 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                               mainAxisAlignment: MainAxisAlignment.end,
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
-                                                                                Flexible(
-                                                                                  child: Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
-                                                                                    child: ClipRRect(
-                                                                                      borderRadius: BorderRadius.circular(0.0),
-                                                                                      child: CachedNetworkImage(
-                                                                                        fadeInDuration: Duration(milliseconds: 500),
-                                                                                        fadeOutDuration: Duration(milliseconds: 500),
-                                                                                        imageUrl: columnExhibitionsRow.imageList.first,
-                                                                                        width: MediaQuery.sizeOf(context).width * 1.0,
-                                                                                        height: 500.0,
-                                                                                        fit: BoxFit.fitHeight,
-                                                                                        alignment: Alignment(1.00, 0.00),
+                                                                                if (responsiveVisibility(
+                                                                                  context: context,
+                                                                                  phone: false,
+                                                                                ))
+                                                                                  Flexible(
+                                                                                    child: Padding(
+                                                                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
+                                                                                      child: ClipRRect(
+                                                                                        borderRadius: BorderRadius.circular(0.0),
+                                                                                        child: CachedNetworkImage(
+                                                                                          fadeInDuration: Duration(milliseconds: 500),
+                                                                                          fadeOutDuration: Duration(milliseconds: 500),
+                                                                                          imageUrl: columnExhibitionsRow.imageList.first,
+                                                                                          width: MediaQuery.sizeOf(context).width * 1.0,
+                                                                                          height: 500.0,
+                                                                                          fit: BoxFit.fitHeight,
+                                                                                          alignment: Alignment(1.00, 0.00),
+                                                                                        ),
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                ),
                                                                                 Expanded(
                                                                                   child: Column(
                                                                                     mainAxisSize: MainAxisSize.max,
@@ -625,6 +632,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                       Divider(
                                                                                         thickness: 0.8,
                                                                                         indent: 1.0,
+                                                                                        endIndent: 10.0,
                                                                                         color: FlutterFlowTheme.of(context).primaryText,
                                                                                       ),
                                                                                       Align(
@@ -634,28 +642,25 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                           children: [
                                                                                             Align(
                                                                                               alignment: AlignmentDirectional(-1.00, -1.00),
-                                                                                              child: Padding(
-                                                                                                padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
-                                                                                                child: InkWell(
-                                                                                                  splashColor: Colors.transparent,
-                                                                                                  focusColor: Colors.transparent,
-                                                                                                  hoverColor: Colors.transparent,
-                                                                                                  highlightColor: Colors.transparent,
-                                                                                                  onTap: () async {
-                                                                                                    setState(() {
-                                                                                                      _model.isGalleryHidden = false;
-                                                                                                      _model.exhibitionRef = columnExhibitionsRow;
-                                                                                                    });
-                                                                                                  },
-                                                                                                  child: Container(
-                                                                                                    width: MediaQuery.sizeOf(context).width * 0.33,
+                                                                                              child: InkWell(
+                                                                                                splashColor: Colors.transparent,
+                                                                                                focusColor: Colors.transparent,
+                                                                                                hoverColor: Colors.transparent,
+                                                                                                highlightColor: Colors.transparent,
+                                                                                                onTap: () async {
+                                                                                                  setState(() {
+                                                                                                    _model.isGalleryHidden = false;
+                                                                                                    _model.exhibitionRef = columnExhibitionsRow;
+                                                                                                  });
+                                                                                                },
+                                                                                                child: Container(
+                                                                                                  width: MediaQuery.sizeOf(context).width * 1.0,
+                                                                                                  height: 66.0,
+                                                                                                  child: custom_widgets.TextWithBackgroundColor(
+                                                                                                    width: MediaQuery.sizeOf(context).width * 1.0,
                                                                                                     height: 66.0,
-                                                                                                    child: custom_widgets.TextWithBackgroundColor(
-                                                                                                      width: MediaQuery.sizeOf(context).width * 0.33,
-                                                                                                      height: 66.0,
-                                                                                                      text: columnExhibitionsRow.titleCursive!,
-                                                                                                      highlightHeight: 40.0,
-                                                                                                    ),
+                                                                                                    text: columnExhibitionsRow.titleCursive!,
+                                                                                                    highlightHeight: 40.0,
                                                                                                   ),
                                                                                                 ),
                                                                                               ),
@@ -676,42 +681,108 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                                   ),
                                                                                                   Divider(
                                                                                                     thickness: 0.5,
-                                                                                                    endIndent: 1.0,
+                                                                                                    endIndent: 10.0,
                                                                                                     color: FlutterFlowTheme.of(context).primaryText,
                                                                                                   ),
+                                                                                                  if (responsiveVisibility(
+                                                                                                    context: context,
+                                                                                                    tablet: false,
+                                                                                                    tabletLandscape: false,
+                                                                                                    desktop: false,
+                                                                                                  ))
+                                                                                                    Padding(
+                                                                                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 6.0),
+                                                                                                      child: ClipRRect(
+                                                                                                        borderRadius: BorderRadius.circular(0.0),
+                                                                                                        child: CachedNetworkImage(
+                                                                                                          fadeInDuration: Duration(milliseconds: 500),
+                                                                                                          fadeOutDuration: Duration(milliseconds: 500),
+                                                                                                          imageUrl: columnExhibitionsRow.imageList.first,
+                                                                                                          width: MediaQuery.sizeOf(context).width * 1.0,
+                                                                                                          height: MediaQuery.sizeOf(context).height * 0.5,
+                                                                                                          fit: BoxFit.fitHeight,
+                                                                                                          alignment: Alignment(1.00, 0.00),
+                                                                                                        ),
+                                                                                                      ),
+                                                                                                    ),
+                                                                                                  if (responsiveVisibility(
+                                                                                                    context: context,
+                                                                                                    tablet: false,
+                                                                                                    tabletLandscape: false,
+                                                                                                    desktop: false,
+                                                                                                  ))
+                                                                                                    Padding(
+                                                                                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 12.0),
+                                                                                                      child: Text(
+                                                                                                        columnExhibitionsRow.dateRowDescription!,
+                                                                                                        style: FlutterFlowTheme.of(context).labelLarge.override(
+                                                                                                              fontFamily: FlutterFlowTheme.of(context).labelLargeFamily,
+                                                                                                              color: FlutterFlowTheme.of(context).primaryText,
+                                                                                                              useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).labelLargeFamily),
+                                                                                                            ),
+                                                                                                      ),
+                                                                                                    ),
+                                                                                                  if (responsiveVisibility(
+                                                                                                    context: context,
+                                                                                                    tablet: false,
+                                                                                                    tabletLandscape: false,
+                                                                                                    desktop: false,
+                                                                                                  ))
+                                                                                                    Align(
+                                                                                                      alignment: AlignmentDirectional(-1.00, 0.00),
+                                                                                                      child: Padding(
+                                                                                                        padding: EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 12.0),
+                                                                                                        child: AutoSizeText(
+                                                                                                          columnExhibitionsRow.longText!,
+                                                                                                          textAlign: TextAlign.start,
+                                                                                                          style: FlutterFlowTheme.of(context).labelMedium.override(
+                                                                                                                fontFamily: FlutterFlowTheme.of(context).labelMediumFamily,
+                                                                                                                fontSize: 16.0,
+                                                                                                                fontWeight: FontWeight.normal,
+                                                                                                                useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).labelMediumFamily),
+                                                                                                                lineHeight: 1.27,
+                                                                                                              ),
+                                                                                                          minFontSize: 10.0,
+                                                                                                        ),
+                                                                                                      ),
+                                                                                                    ),
                                                                                                 ],
                                                                                               ),
                                                                                             ),
                                                                                           ],
                                                                                         ),
                                                                                       ),
-                                                                                      Align(
-                                                                                        alignment: AlignmentDirectional(0.00, 0.00),
-                                                                                        child: Padding(
-                                                                                          padding: EdgeInsetsDirectional.fromSTEB(12.0, 12.0, 0.0, 0.0),
-                                                                                          child: Container(
-                                                                                            decoration: BoxDecoration(
-                                                                                              color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                                                            ),
-                                                                                            alignment: AlignmentDirectional(-1.00, -1.00),
-                                                                                            child: Align(
-                                                                                              alignment: AlignmentDirectional(0.00, 0.00),
-                                                                                              child: AutoSizeText(
-                                                                                                columnExhibitionsRow.longText!,
-                                                                                                textAlign: TextAlign.justify,
-                                                                                                style: FlutterFlowTheme.of(context).labelMedium.override(
-                                                                                                      fontFamily: FlutterFlowTheme.of(context).labelMediumFamily,
-                                                                                                      fontSize: 16.0,
-                                                                                                      fontWeight: FontWeight.normal,
-                                                                                                      useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).labelMediumFamily),
-                                                                                                      lineHeight: 1.3,
-                                                                                                    ),
-                                                                                                minFontSize: 10.0,
+                                                                                      if (responsiveVisibility(
+                                                                                        context: context,
+                                                                                        phone: false,
+                                                                                      ))
+                                                                                        Align(
+                                                                                          alignment: AlignmentDirectional(0.00, 0.00),
+                                                                                          child: Padding(
+                                                                                            padding: EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 0.0, 0.0),
+                                                                                            child: Container(
+                                                                                              decoration: BoxDecoration(
+                                                                                                color: FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                              ),
+                                                                                              alignment: AlignmentDirectional(-1.00, -1.00),
+                                                                                              child: Align(
+                                                                                                alignment: AlignmentDirectional(-1.00, 0.00),
+                                                                                                child: AutoSizeText(
+                                                                                                  columnExhibitionsRow.longText!,
+                                                                                                  textAlign: TextAlign.justify,
+                                                                                                  style: FlutterFlowTheme.of(context).labelMedium.override(
+                                                                                                        fontFamily: FlutterFlowTheme.of(context).labelMediumFamily,
+                                                                                                        fontSize: 16.0,
+                                                                                                        fontWeight: FontWeight.normal,
+                                                                                                        useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).labelMediumFamily),
+                                                                                                        lineHeight: 1.3,
+                                                                                                      ),
+                                                                                                  minFontSize: 10.0,
+                                                                                                ),
                                                                                               ),
                                                                                             ),
                                                                                           ),
                                                                                         ),
-                                                                                      ),
                                                                                     ],
                                                                                   ),
                                                                                 ),
@@ -786,6 +857,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                     .start,
                                                             children: [
                                                               Flexible(
+                                                                flex: 2,
                                                                 child: Align(
                                                                   alignment:
                                                                       AlignmentDirectional(
@@ -802,6 +874,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                       Divider(
                                                                         thickness:
                                                                             0.8,
+                                                                        endIndent:
+                                                                            100.0,
                                                                         color: FlutterFlowTheme.of(context)
                                                                             .secondary,
                                                                       ),
@@ -823,7 +897,11 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                   'Title in cursive',
                                                                                 ),
                                                                                 textAlign: TextAlign.start,
-                                                                                style: FlutterFlowTheme.of(context).displaySmall,
+                                                                                style: FlutterFlowTheme.of(context).displaySmall.override(
+                                                                                      fontFamily: FlutterFlowTheme.of(context).displaySmallFamily,
+                                                                                      useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).displaySmallFamily),
+                                                                                      lineHeight: 0.9,
+                                                                                    ),
                                                                                 minFontSize: 16.0,
                                                                               ),
                                                                             ),
@@ -843,7 +921,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                   ),
                                                                                   Divider(
                                                                                     thickness: 0.5,
-                                                                                    endIndent: 1.0,
+                                                                                    endIndent: 100.0,
                                                                                     color: FlutterFlowTheme.of(context).primaryText,
                                                                                   ),
                                                                                 ],
@@ -856,135 +934,172 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                   ),
                                                                 ),
                                                               ),
-                                                              Expanded(
-                                                                child: Align(
-                                                                  alignment:
-                                                                      AlignmentDirectional(
-                                                                          0.00,
-                                                                          -1.00),
-                                                                  child: Column(
-                                                                    mainAxisSize:
-                                                                        MainAxisSize
-                                                                            .min,
-                                                                    crossAxisAlignment:
-                                                                        CrossAxisAlignment
-                                                                            .stretch,
-                                                                    children: [],
-                                                                  ),
-                                                                ),
-                                                              ),
-                                                            ],
-                                                          ),
-                                                          Builder(
-                                                            builder: (context) {
-                                                              final galleryImages = _model
-                                                                      .exhibitionRef
-                                                                      ?.imageList
-                                                                      ?.toList() ??
-                                                                  [];
-                                                              return Container(
-                                                                width: double
-                                                                    .infinity,
-                                                                height: MediaQuery.sizeOf(
-                                                                            context)
-                                                                        .height *
-                                                                    0.4,
-                                                                child:
-                                                                    CarouselSlider
-                                                                        .builder(
-                                                                  itemCount:
-                                                                      galleryImages
-                                                                          .length,
-                                                                  itemBuilder:
-                                                                      (context,
-                                                                          galleryImagesIndex,
-                                                                          _) {
-                                                                    final galleryImagesItem =
-                                                                        galleryImages[
-                                                                            galleryImagesIndex];
-                                                                    return Column(
+                                                              if (responsiveVisibility(
+                                                                context:
+                                                                    context,
+                                                                phone: false,
+                                                              ))
+                                                                Expanded(
+                                                                  child: Align(
+                                                                    alignment:
+                                                                        AlignmentDirectional(
+                                                                            0.00,
+                                                                            -1.00),
+                                                                    child:
+                                                                        Column(
                                                                       mainAxisSize:
                                                                           MainAxisSize
                                                                               .min,
-                                                                      children: [
-                                                                        Align(
-                                                                          alignment: AlignmentDirectional(
-                                                                              0.00,
-                                                                              -1.00),
-                                                                          child:
-                                                                              ClipRRect(
-                                                                            borderRadius:
-                                                                                BorderRadius.circular(0.0),
-                                                                            child:
-                                                                                Image.network(
-                                                                              galleryImagesItem,
-                                                                              width: MediaQuery.sizeOf(context).width * 0.4,
-                                                                              height: MediaQuery.sizeOf(context).height * 0.5,
-                                                                              fit: BoxFit.fitHeight,
-                                                                              alignment: Alignment(-1.00, -1.00),
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                        Align(
-                                                                          alignment: AlignmentDirectional(
-                                                                              -1.00,
-                                                                              -1.00),
-                                                                          child:
-                                                                              Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
-                                                                                0.0,
-                                                                                8.0,
-                                                                                0.0,
-                                                                                0.0),
-                                                                            child:
-                                                                                Text(
-                                                                              valueOrDefault<String>(
-                                                                                _model.exhibitionRef?.imageDescriptionList?[galleryImagesIndex],
-                                                                                'Description',
-                                                                              ),
-                                                                              style: FlutterFlowTheme.of(context).labelMedium.override(
-                                                                                    fontFamily: FlutterFlowTheme.of(context).labelMediumFamily,
-                                                                                    fontSize: 12.0,
-                                                                                    useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).labelMediumFamily),
-                                                                                  ),
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                      ],
-                                                                    );
-                                                                  },
-                                                                  carouselController:
-                                                                      _model.carouselController ??=
-                                                                          CarouselController(),
-                                                                  options:
-                                                                      CarouselOptions(
-                                                                    initialPage: min(
-                                                                        1,
-                                                                        galleryImages.length -
-                                                                            1),
-                                                                    viewportFraction:
-                                                                        0.4,
-                                                                    disableCenter:
-                                                                        true,
-                                                                    enlargeCenterPage:
-                                                                        true,
-                                                                    enlargeFactor:
-                                                                        0.3,
-                                                                    enableInfiniteScroll:
-                                                                        true,
-                                                                    scrollDirection:
-                                                                        Axis.horizontal,
-                                                                    autoPlay:
-                                                                        false,
-                                                                    onPageChanged: (index,
-                                                                            _) =>
-                                                                        _model.carouselCurrentIndex =
-                                                                            index,
+                                                                      crossAxisAlignment:
+                                                                          CrossAxisAlignment
+                                                                              .stretch,
+                                                                      children: [],
+                                                                    ),
                                                                   ),
                                                                 ),
-                                                              );
-                                                            },
+                                                            ],
                                                           ),
+                                                          if (responsiveVisibility(
+                                                            context: context,
+                                                            phone: false,
+                                                          ))
+                                                            Builder(
+                                                              builder:
+                                                                  (context) {
+                                                                final galleryImages = _model
+                                                                        .exhibitionRef
+                                                                        ?.imageList
+                                                                        ?.toList() ??
+                                                                    [];
+                                                                return Container(
+                                                                  width: double
+                                                                      .infinity,
+                                                                  height: MediaQuery.sizeOf(
+                                                                              context)
+                                                                          .height *
+                                                                      0.4,
+                                                                  child: CarouselSlider
+                                                                      .builder(
+                                                                    itemCount:
+                                                                        galleryImages
+                                                                            .length,
+                                                                    itemBuilder:
+                                                                        (context,
+                                                                            galleryImagesIndex,
+                                                                            _) {
+                                                                      final galleryImagesItem =
+                                                                          galleryImages[
+                                                                              galleryImagesIndex];
+                                                                      return Column(
+                                                                        mainAxisSize:
+                                                                            MainAxisSize.min,
+                                                                        children: [
+                                                                          Align(
+                                                                            alignment:
+                                                                                AlignmentDirectional(0.00, -1.00),
+                                                                            child:
+                                                                                ClipRRect(
+                                                                              borderRadius: BorderRadius.circular(0.0),
+                                                                              child: CachedNetworkImage(
+                                                                                fadeInDuration: Duration(milliseconds: 500),
+                                                                                fadeOutDuration: Duration(milliseconds: 500),
+                                                                                imageUrl: galleryImagesItem,
+                                                                                width: MediaQuery.sizeOf(context).width * 0.4,
+                                                                                height: MediaQuery.sizeOf(context).height * 0.37,
+                                                                                fit: BoxFit.cover,
+                                                                                alignment: Alignment(-1.00, -1.00),
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                          Align(
+                                                                            alignment:
+                                                                                AlignmentDirectional(-1.00, -1.00),
+                                                                            child:
+                                                                                Padding(
+                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
+                                                                              child: Text(
+                                                                                valueOrDefault<String>(
+                                                                                  _model.exhibitionRef?.imageDescriptionList?[galleryImagesIndex],
+                                                                                  'Description',
+                                                                                ),
+                                                                                style: FlutterFlowTheme.of(context).headlineMedium.override(
+                                                                                      fontFamily: FlutterFlowTheme.of(context).headlineMediumFamily,
+                                                                                      useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).headlineMediumFamily),
+                                                                                      lineHeight: 1.43,
+                                                                                    ),
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                        ],
+                                                                      );
+                                                                    },
+                                                                    carouselController:
+                                                                        _model.carouselController1 ??=
+                                                                            CarouselController(),
+                                                                    options:
+                                                                        CarouselOptions(
+                                                                      initialPage: min(
+                                                                          2,
+                                                                          galleryImages.length -
+                                                                              1),
+                                                                      viewportFraction:
+                                                                          0.4,
+                                                                      disableCenter:
+                                                                          true,
+                                                                      enlargeCenterPage:
+                                                                          true,
+                                                                      enlargeFactor:
+                                                                          0.1,
+                                                                      enableInfiniteScroll:
+                                                                          true,
+                                                                      scrollDirection:
+                                                                          Axis.horizontal,
+                                                                      autoPlay:
+                                                                          false,
+                                                                      onPageChanged: (index,
+                                                                              _) =>
+                                                                          _model.carouselCurrentIndex1 =
+                                                                              index,
+                                                                    ),
+                                                                  ),
+                                                                );
+                                                              },
+                                                            ),
+                                                          if (responsiveVisibility(
+                                                            context: context,
+                                                            tablet: false,
+                                                            tabletLandscape:
+                                                                false,
+                                                            desktop: false,
+                                                          ))
+                                                            ClipRRect(
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .circular(
+                                                                          8.0),
+                                                              child:
+                                                                  CachedNetworkImage(
+                                                                fadeInDuration:
+                                                                    Duration(
+                                                                        milliseconds:
+                                                                            500),
+                                                                fadeOutDuration:
+                                                                    Duration(
+                                                                        milliseconds:
+                                                                            500),
+                                                                imageUrl: _model
+                                                                    .exhibitionRef!
+                                                                    .imageList
+                                                                    .first,
+                                                                width: MediaQuery.sizeOf(
+                                                                            context)
+                                                                        .width *
+                                                                    1.0,
+                                                                height: 400.0,
+                                                                fit: BoxFit
+                                                                    .fitHeight,
+                                                              ),
+                                                            ),
                                                           Padding(
                                                             padding:
                                                                 EdgeInsetsDirectional
@@ -1008,6 +1123,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                   mainAxisSize:
                                                                       MainAxisSize
                                                                           .max,
+                                                                  crossAxisAlignment:
+                                                                      CrossAxisAlignment
+                                                                          .start,
                                                                   children: [
                                                                     Align(
                                                                       alignment: AlignmentDirectional(
@@ -1025,67 +1143,183 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         textAlign:
                                                                             TextAlign.start,
                                                                         style: FlutterFlowTheme.of(context)
-                                                                            .labelMedium,
+                                                                            .labelMedium
+                                                                            .override(
+                                                                              fontFamily: FlutterFlowTheme.of(context).labelMediumFamily,
+                                                                              useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).labelMediumFamily),
+                                                                              lineHeight: 1.3,
+                                                                            ),
                                                                       ),
                                                                     ),
+                                                                    if (responsiveVisibility(
+                                                                      context:
+                                                                          context,
+                                                                      tablet:
+                                                                          false,
+                                                                      tabletLandscape:
+                                                                          false,
+                                                                      desktop:
+                                                                          false,
+                                                                    ))
+                                                                      Align(
+                                                                        alignment: AlignmentDirectional(
+                                                                            -1.00,
+                                                                            0.00),
+                                                                        child:
+                                                                            Padding(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                              0.0,
+                                                                              20.0,
+                                                                              0.0,
+                                                                              0.0),
+                                                                          child:
+                                                                              Text(
+                                                                            valueOrDefault<String>(
+                                                                              _model.exhibitionRef?.longText,
+                                                                              'Long text',
+                                                                            ),
+                                                                            textAlign:
+                                                                                TextAlign.start,
+                                                                            style: FlutterFlowTheme.of(context).labelMedium.override(
+                                                                                  fontFamily: FlutterFlowTheme.of(context).labelMediumFamily,
+                                                                                  useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).labelMediumFamily),
+                                                                                  lineHeight: 1.3,
+                                                                                ),
+                                                                          ),
+                                                                        ),
+                                                                      ),
                                                                   ],
                                                                 ),
-                                                                Column(
-                                                                  mainAxisSize:
-                                                                      MainAxisSize
-                                                                          .max,
-                                                                  children: [
-                                                                    Align(
-                                                                      alignment: AlignmentDirectional(
-                                                                          0.00,
-                                                                          0.00),
-                                                                      child:
-                                                                          Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                                                            0.0,
-                                                                            0.0,
-                                                                            24.0,
-                                                                            0.0),
+                                                                if (responsiveVisibility(
+                                                                  context:
+                                                                      context,
+                                                                  phone: false,
+                                                                ))
+                                                                  Column(
+                                                                    mainAxisSize:
+                                                                        MainAxisSize
+                                                                            .max,
+                                                                    children: [
+                                                                      Align(
+                                                                        alignment: AlignmentDirectional(
+                                                                            0.00,
+                                                                            0.00),
                                                                         child:
-                                                                            Container(
-                                                                          width:
-                                                                              MediaQuery.sizeOf(context).width * 0.33,
-                                                                          decoration:
-                                                                              BoxDecoration(
-                                                                            color:
-                                                                                FlutterFlowTheme.of(context).secondaryBackground,
-                                                                          ),
-                                                                          alignment: AlignmentDirectional(
-                                                                              -1.00,
-                                                                              -1.00),
+                                                                            Padding(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                              0.0,
+                                                                              0.0,
+                                                                              24.0,
+                                                                              0.0),
                                                                           child:
-                                                                              Align(
+                                                                              Container(
+                                                                            width:
+                                                                                MediaQuery.sizeOf(context).width * 0.33,
+                                                                            decoration:
+                                                                                BoxDecoration(
+                                                                              color: FlutterFlowTheme.of(context).secondaryBackground,
+                                                                            ),
                                                                             alignment:
-                                                                                AlignmentDirectional(-1.00, 0.00),
+                                                                                AlignmentDirectional(-1.00, -1.00),
                                                                             child:
-                                                                                Text(
-                                                                              valueOrDefault<String>(
-                                                                                _model.exhibitionRef?.longText,
-                                                                                'Long text',
+                                                                                Align(
+                                                                              alignment: AlignmentDirectional(-1.00, 0.00),
+                                                                              child: Text(
+                                                                                valueOrDefault<String>(
+                                                                                  _model.exhibitionRef?.longText,
+                                                                                  'Long text',
+                                                                                ),
+                                                                                textAlign: TextAlign.start,
+                                                                                style: FlutterFlowTheme.of(context).labelMedium.override(
+                                                                                      fontFamily: FlutterFlowTheme.of(context).labelMediumFamily,
+                                                                                      useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).labelMediumFamily),
+                                                                                      lineHeight: 1.3,
+                                                                                    ),
                                                                               ),
-                                                                              textAlign: TextAlign.start,
-                                                                              style: FlutterFlowTheme.of(context).labelMedium,
                                                                             ),
                                                                           ),
                                                                         ),
                                                                       ),
-                                                                    ),
-                                                                  ],
-                                                                ),
-                                                                Column(
-                                                                  mainAxisSize:
-                                                                      MainAxisSize
-                                                                          .max,
-                                                                  children: [],
-                                                                ),
+                                                                    ],
+                                                                  ),
+                                                                if (responsiveVisibility(
+                                                                  context:
+                                                                      context,
+                                                                  phone: false,
+                                                                ))
+                                                                  Column(
+                                                                    mainAxisSize:
+                                                                        MainAxisSize
+                                                                            .max,
+                                                                    children: [],
+                                                                  ),
                                                               ],
                                                             ),
                                                           ),
+                                                          if (responsiveVisibility(
+                                                            context: context,
+                                                            tablet: false,
+                                                            tabletLandscape:
+                                                                false,
+                                                            desktop: false,
+                                                          ))
+                                                            Builder(
+                                                              builder:
+                                                                  (context) {
+                                                                final galleryImagesMobile = _model
+                                                                        .exhibitionRef
+                                                                        ?.imageList
+                                                                        ?.toList() ??
+                                                                    [];
+                                                                return ListView
+                                                                    .builder(
+                                                                  padding:
+                                                                      EdgeInsets
+                                                                          .zero,
+                                                                  shrinkWrap:
+                                                                      true,
+                                                                  scrollDirection:
+                                                                      Axis.vertical,
+                                                                  itemCount:
+                                                                      galleryImagesMobile
+                                                                          .length,
+                                                                  itemBuilder:
+                                                                      (context,
+                                                                          galleryImagesMobileIndex) {
+                                                                    final galleryImagesMobileItem =
+                                                                        galleryImagesMobile[
+                                                                            galleryImagesMobileIndex];
+                                                                    return Padding(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          0.0,
+                                                                          0.0,
+                                                                          0.0,
+                                                                          20.0),
+                                                                      child:
+                                                                          ClipRRect(
+                                                                        borderRadius:
+                                                                            BorderRadius.circular(8.0),
+                                                                        child:
+                                                                            CachedNetworkImage(
+                                                                          fadeInDuration:
+                                                                              Duration(milliseconds: 500),
+                                                                          fadeOutDuration:
+                                                                              Duration(milliseconds: 500),
+                                                                          imageUrl:
+                                                                              galleryImagesMobileItem,
+                                                                          width:
+                                                                              MediaQuery.sizeOf(context).width * 1.0,
+                                                                          height:
+                                                                              MediaQuery.sizeOf(context).height * 0.5,
+                                                                          fit: BoxFit
+                                                                              .fitHeight,
+                                                                        ),
+                                                                      ),
+                                                                    );
+                                                                  },
+                                                                );
+                                                              },
+                                                            ),
                                                         ],
                                                       ),
                                                     ),
@@ -1099,6 +1333,69 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                   setState(() {}),
                                               child: SubscriptionWidgetWidget(),
                                             ),
+                                            Container(
+                                              width: MediaQuery.sizeOf(context)
+                                                      .width *
+                                                  1.0,
+                                              height: MediaQuery.sizeOf(context)
+                                                      .height *
+                                                  1.0,
+                                              child: custom_widgets
+                                                  .DragAndDropImage(
+                                                width:
+                                                    MediaQuery.sizeOf(context)
+                                                            .width *
+                                                        1.0,
+                                                height:
+                                                    MediaQuery.sizeOf(context)
+                                                            .height *
+                                                        1.0,
+                                                positionX: 20.0,
+                                                positionY: 100.0,
+                                              ),
+                                            ),
+                                            Container(
+                                              width: MediaQuery.sizeOf(context)
+                                                      .width *
+                                                  1.0,
+                                              height: MediaQuery.sizeOf(context)
+                                                      .height *
+                                                  1.0,
+                                              child: custom_widgets
+                                                  .DragAndDropImage(
+                                                width:
+                                                    MediaQuery.sizeOf(context)
+                                                            .width *
+                                                        1.0,
+                                                height:
+                                                    MediaQuery.sizeOf(context)
+                                                            .height *
+                                                        1.0,
+                                                positionX: 60.0,
+                                                positionY: 200.0,
+                                              ),
+                                            ),
+                                            Container(
+                                              width: MediaQuery.sizeOf(context)
+                                                      .width *
+                                                  1.0,
+                                              height: MediaQuery.sizeOf(context)
+                                                      .height *
+                                                  1.0,
+                                              child: custom_widgets
+                                                  .DragAndDropImage(
+                                                width:
+                                                    MediaQuery.sizeOf(context)
+                                                            .width *
+                                                        1.0,
+                                                height:
+                                                    MediaQuery.sizeOf(context)
+                                                            .height *
+                                                        1.0,
+                                                positionX: 150.0,
+                                                positionY: 600.0,
+                                              ),
+                                            ),
                                           ],
                                         ),
                                       ),
@@ -1108,13 +1405,928 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                 KeepAliveWidgetWrapper(
                                   builder: (context) => Column(
                                     mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
                                     children: [
-                                      Text(
-                                        'The structure of this page is identical to Exhibitions',
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium,
+                                      Expanded(
+                                        child: Stack(
+                                          children: [
+                                            SingleChildScrollView(
+                                              child: Column(
+                                                mainAxisSize: MainAxisSize.max,
+                                                children: [
+                                                  Stack(
+                                                    children: [
+                                                      Align(
+                                                        alignment:
+                                                            AlignmentDirectional(
+                                                                0.00, 0.00),
+                                                        child: FutureBuilder<
+                                                            List<OtherRow>>(
+                                                          future: OtherTable()
+                                                              .queryRows(
+                                                            queryFn: (q) =>
+                                                                q.order(
+                                                                    'created_at'),
+                                                          ),
+                                                          builder: (context,
+                                                              snapshot) {
+                                                            // Customize what your widget looks like when it's loading.
+                                                            if (!snapshot
+                                                                .hasData) {
+                                                              return Center(
+                                                                child: SizedBox(
+                                                                  width: 30.0,
+                                                                  height: 30.0,
+                                                                  child:
+                                                                      CircularProgressIndicator(
+                                                                    valueColor:
+                                                                        AlwaysStoppedAnimation<
+                                                                            Color>(
+                                                                      FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .accent4,
+                                                                    ),
+                                                                  ),
+                                                                ),
+                                                              );
+                                                            }
+                                                            List<OtherRow>
+                                                                columnOtherRowList =
+                                                                snapshot.data!;
+                                                            return Column(
+                                                              mainAxisSize:
+                                                                  MainAxisSize
+                                                                      .max,
+                                                              mainAxisAlignment:
+                                                                  MainAxisAlignment
+                                                                      .spaceBetween,
+                                                              children: List.generate(
+                                                                      columnOtherRowList
+                                                                          .length,
+                                                                      (columnIndex) {
+                                                                final columnOtherRow =
+                                                                    columnOtherRowList[
+                                                                        columnIndex];
+                                                                return Row(
+                                                                  mainAxisSize:
+                                                                      MainAxisSize
+                                                                          .max,
+                                                                  crossAxisAlignment:
+                                                                      CrossAxisAlignment
+                                                                          .start,
+                                                                  children: [
+                                                                    if (responsiveVisibility(
+                                                                      context:
+                                                                          context,
+                                                                      phone:
+                                                                          false,
+                                                                    ))
+                                                                      Expanded(
+                                                                        child:
+                                                                            Align(
+                                                                          alignment: AlignmentDirectional(
+                                                                              0.00,
+                                                                              -1.00),
+                                                                          child:
+                                                                              Padding(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                                20.0,
+                                                                                10.0,
+                                                                                0.0,
+                                                                                0.0),
+                                                                            child:
+                                                                                Column(
+                                                                              mainAxisSize: MainAxisSize.max,
+                                                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                                                              children: [
+                                                                                Align(
+                                                                                  alignment: AlignmentDirectional(-1.00, 0.00),
+                                                                                  child: Container(
+                                                                                    decoration: BoxDecoration(
+                                                                                      color: FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                    ),
+                                                                                    child: Text(
+                                                                                      columnOtherRow.dateRowDescription!,
+                                                                                      style: FlutterFlowTheme.of(context).labelLarge.override(
+                                                                                            fontFamily: FlutterFlowTheme.of(context).labelLargeFamily,
+                                                                                            color: FlutterFlowTheme.of(context).primaryText,
+                                                                                            useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).labelLargeFamily),
+                                                                                          ),
+                                                                                    ),
+                                                                                  ),
+                                                                                ),
+                                                                              ],
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                      ),
+                                                                    Expanded(
+                                                                      flex: 2,
+                                                                      child:
+                                                                          Padding(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            8.0,
+                                                                            0.0,
+                                                                            8.0,
+                                                                            0.0),
+                                                                        child:
+                                                                            Column(
+                                                                          mainAxisSize:
+                                                                              MainAxisSize.max,
+                                                                          crossAxisAlignment:
+                                                                              CrossAxisAlignment.start,
+                                                                          children: [
+                                                                            Row(
+                                                                              mainAxisSize: MainAxisSize.min,
+                                                                              mainAxisAlignment: MainAxisAlignment.end,
+                                                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                                                              children: [
+                                                                                if (responsiveVisibility(
+                                                                                  context: context,
+                                                                                  phone: false,
+                                                                                ))
+                                                                                  Flexible(
+                                                                                    child: Padding(
+                                                                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 0.0),
+                                                                                      child: ClipRRect(
+                                                                                        borderRadius: BorderRadius.circular(0.0),
+                                                                                        child: CachedNetworkImage(
+                                                                                          fadeInDuration: Duration(milliseconds: 500),
+                                                                                          fadeOutDuration: Duration(milliseconds: 500),
+                                                                                          imageUrl: columnOtherRow.imageList.first,
+                                                                                          width: MediaQuery.sizeOf(context).width * 1.0,
+                                                                                          height: 500.0,
+                                                                                          fit: BoxFit.fitHeight,
+                                                                                          alignment: Alignment(1.00, 0.00),
+                                                                                        ),
+                                                                                      ),
+                                                                                    ),
+                                                                                  ),
+                                                                                Expanded(
+                                                                                  child: Column(
+                                                                                    mainAxisSize: MainAxisSize.max,
+                                                                                    mainAxisAlignment: MainAxisAlignment.start,
+                                                                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                                                                    children: [
+                                                                                      Divider(
+                                                                                        thickness: 0.8,
+                                                                                        indent: 1.0,
+                                                                                        endIndent: 10.0,
+                                                                                        color: FlutterFlowTheme.of(context).primaryText,
+                                                                                      ),
+                                                                                      Align(
+                                                                                        alignment: AlignmentDirectional(-1.00, -1.00),
+                                                                                        child: Stack(
+                                                                                          alignment: AlignmentDirectional(-1.0, -1.0),
+                                                                                          children: [
+                                                                                            Align(
+                                                                                              alignment: AlignmentDirectional(-1.00, -1.00),
+                                                                                              child: InkWell(
+                                                                                                splashColor: Colors.transparent,
+                                                                                                focusColor: Colors.transparent,
+                                                                                                hoverColor: Colors.transparent,
+                                                                                                highlightColor: Colors.transparent,
+                                                                                                onTap: () async {
+                                                                                                  setState(() {
+                                                                                                    _model.isGalleryHidden = false;
+                                                                                                    _model.otherRef = columnOtherRow;
+                                                                                                  });
+                                                                                                },
+                                                                                                child: Container(
+                                                                                                  width: MediaQuery.sizeOf(context).width * 1.0,
+                                                                                                  height: 66.0,
+                                                                                                  child: custom_widgets.TextWithBackgroundColor(
+                                                                                                    width: MediaQuery.sizeOf(context).width * 1.0,
+                                                                                                    height: 66.0,
+                                                                                                    text: columnOtherRow.titleCursive!,
+                                                                                                    highlightHeight: 40.0,
+                                                                                                  ),
+                                                                                                ),
+                                                                                              ),
+                                                                                            ),
+                                                                                            Align(
+                                                                                              alignment: AlignmentDirectional(0.00, 0.00),
+                                                                                              child: Column(
+                                                                                                mainAxisSize: MainAxisSize.max,
+                                                                                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                                                                children: [
+                                                                                                  Padding(
+                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 18.0),
+                                                                                                    child: Text(
+                                                                                                      ' ',
+                                                                                                      style: FlutterFlowTheme.of(context).bodyMedium,
+                                                                                                    ),
+                                                                                                  ),
+                                                                                                  Divider(
+                                                                                                    thickness: 0.5,
+                                                                                                    endIndent: 10.0,
+                                                                                                    color: FlutterFlowTheme.of(context).primaryText,
+                                                                                                  ),
+                                                                                                  if (responsiveVisibility(
+                                                                                                    context: context,
+                                                                                                    tablet: false,
+                                                                                                    tabletLandscape: false,
+                                                                                                    desktop: false,
+                                                                                                  ))
+                                                                                                    Padding(
+                                                                                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 6.0, 0.0, 6.0),
+                                                                                                      child: ClipRRect(
+                                                                                                        borderRadius: BorderRadius.circular(0.0),
+                                                                                                        child: CachedNetworkImage(
+                                                                                                          fadeInDuration: Duration(milliseconds: 500),
+                                                                                                          fadeOutDuration: Duration(milliseconds: 500),
+                                                                                                          imageUrl: columnOtherRow.imageList.first,
+                                                                                                          width: MediaQuery.sizeOf(context).width * 1.0,
+                                                                                                          height: MediaQuery.sizeOf(context).height * 0.5,
+                                                                                                          fit: BoxFit.fitHeight,
+                                                                                                          alignment: Alignment(1.00, 0.00),
+                                                                                                        ),
+                                                                                                      ),
+                                                                                                    ),
+                                                                                                  if (responsiveVisibility(
+                                                                                                    context: context,
+                                                                                                    tablet: false,
+                                                                                                    tabletLandscape: false,
+                                                                                                    desktop: false,
+                                                                                                  ))
+                                                                                                    Padding(
+                                                                                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 12.0),
+                                                                                                      child: Text(
+                                                                                                        columnOtherRow.dateRowDescription!,
+                                                                                                        style: FlutterFlowTheme.of(context).labelLarge.override(
+                                                                                                              fontFamily: FlutterFlowTheme.of(context).labelLargeFamily,
+                                                                                                              color: FlutterFlowTheme.of(context).primaryText,
+                                                                                                              useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).labelLargeFamily),
+                                                                                                            ),
+                                                                                                      ),
+                                                                                                    ),
+                                                                                                  if (responsiveVisibility(
+                                                                                                    context: context,
+                                                                                                    tablet: false,
+                                                                                                    tabletLandscape: false,
+                                                                                                    desktop: false,
+                                                                                                  ))
+                                                                                                    Align(
+                                                                                                      alignment: AlignmentDirectional(-1.00, 0.00),
+                                                                                                      child: Padding(
+                                                                                                        padding: EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 12.0),
+                                                                                                        child: AutoSizeText(
+                                                                                                          columnOtherRow.longText!,
+                                                                                                          textAlign: TextAlign.start,
+                                                                                                          style: FlutterFlowTheme.of(context).labelMedium.override(
+                                                                                                                fontFamily: FlutterFlowTheme.of(context).labelMediumFamily,
+                                                                                                                fontSize: 16.0,
+                                                                                                                fontWeight: FontWeight.normal,
+                                                                                                                useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).labelMediumFamily),
+                                                                                                                lineHeight: 1.27,
+                                                                                                              ),
+                                                                                                          minFontSize: 10.0,
+                                                                                                        ),
+                                                                                                      ),
+                                                                                                    ),
+                                                                                                ],
+                                                                                              ),
+                                                                                            ),
+                                                                                          ],
+                                                                                        ),
+                                                                                      ),
+                                                                                      if (responsiveVisibility(
+                                                                                        context: context,
+                                                                                        phone: false,
+                                                                                      ))
+                                                                                        Align(
+                                                                                          alignment: AlignmentDirectional(0.00, 0.00),
+                                                                                          child: Padding(
+                                                                                            padding: EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 0.0, 0.0),
+                                                                                            child: Container(
+                                                                                              decoration: BoxDecoration(
+                                                                                                color: FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                              ),
+                                                                                              alignment: AlignmentDirectional(-1.00, -1.00),
+                                                                                              child: Align(
+                                                                                                alignment: AlignmentDirectional(-1.00, 0.00),
+                                                                                                child: AutoSizeText(
+                                                                                                  columnOtherRow.longText!,
+                                                                                                  textAlign: TextAlign.justify,
+                                                                                                  style: FlutterFlowTheme.of(context).labelMedium.override(
+                                                                                                        fontFamily: FlutterFlowTheme.of(context).labelMediumFamily,
+                                                                                                        fontSize: 16.0,
+                                                                                                        fontWeight: FontWeight.normal,
+                                                                                                        useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).labelMediumFamily),
+                                                                                                        lineHeight: 1.3,
+                                                                                                      ),
+                                                                                                  minFontSize: 10.0,
+                                                                                                ),
+                                                                                              ),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                    ],
+                                                                                  ),
+                                                                                ),
+                                                                              ].divide(SizedBox(width: 0.0)),
+                                                                            ),
+                                                                          ],
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                  ],
+                                                                );
+                                                              })
+                                                                  .divide(SizedBox(
+                                                                      height:
+                                                                          60.0))
+                                                                  .around(SizedBox(
+                                                                      height:
+                                                                          60.0)),
+                                                            );
+                                                          },
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                            if (!valueOrDefault<bool>(
+                                              _model.isGalleryHidden,
+                                              false,
+                                            ))
+                                              Align(
+                                                alignment: AlignmentDirectional(
+                                                    0.00, 0.00),
+                                                child: Container(
+                                                  width:
+                                                      MediaQuery.sizeOf(context)
+                                                              .width *
+                                                          1.0,
+                                                  height:
+                                                      MediaQuery.sizeOf(context)
+                                                              .height *
+                                                          1.0,
+                                                  decoration: BoxDecoration(
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .primary,
+                                                  ),
+                                                  child: Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(16.0, 0.0,
+                                                                16.0, 0.0),
+                                                    child:
+                                                        SingleChildScrollView(
+                                                      child: Column(
+                                                        mainAxisSize:
+                                                            MainAxisSize.max,
+                                                        crossAxisAlignment:
+                                                            CrossAxisAlignment
+                                                                .start,
+                                                        children: [
+                                                          Row(
+                                                            mainAxisSize:
+                                                                MainAxisSize
+                                                                    .min,
+                                                            mainAxisAlignment:
+                                                                MainAxisAlignment
+                                                                    .start,
+                                                            crossAxisAlignment:
+                                                                CrossAxisAlignment
+                                                                    .start,
+                                                            children: [
+                                                              Flexible(
+                                                                flex: 2,
+                                                                child: Align(
+                                                                  alignment:
+                                                                      AlignmentDirectional(
+                                                                          -1.00,
+                                                                          -1.00),
+                                                                  child: Column(
+                                                                    mainAxisSize:
+                                                                        MainAxisSize
+                                                                            .min,
+                                                                    crossAxisAlignment:
+                                                                        CrossAxisAlignment
+                                                                            .start,
+                                                                    children: [
+                                                                      Divider(
+                                                                        thickness:
+                                                                            0.8,
+                                                                        endIndent:
+                                                                            100.0,
+                                                                        color: FlutterFlowTheme.of(context)
+                                                                            .secondary,
+                                                                      ),
+                                                                      Align(
+                                                                        alignment: AlignmentDirectional(
+                                                                            -1.00,
+                                                                            -1.00),
+                                                                        child:
+                                                                            Stack(
+                                                                          alignment: AlignmentDirectional(
+                                                                              -1.0,
+                                                                              -1.0),
+                                                                          children: [
+                                                                            Align(
+                                                                              alignment: AlignmentDirectional(-1.00, 0.00),
+                                                                              child: AutoSizeText(
+                                                                                valueOrDefault<String>(
+                                                                                  _model.otherRef?.titleCursive,
+                                                                                  'Aapo Nikanen',
+                                                                                ),
+                                                                                textAlign: TextAlign.start,
+                                                                                style: FlutterFlowTheme.of(context).displaySmall.override(
+                                                                                      fontFamily: FlutterFlowTheme.of(context).displaySmallFamily,
+                                                                                      useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).displaySmallFamily),
+                                                                                      lineHeight: 0.9,
+                                                                                    ),
+                                                                                minFontSize: 16.0,
+                                                                              ),
+                                                                            ),
+                                                                            Align(
+                                                                              alignment: AlignmentDirectional(0.00, 0.00),
+                                                                              child: Column(
+                                                                                mainAxisSize: MainAxisSize.max,
+                                                                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                                                children: [
+                                                                                  Padding(
+                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 22.0),
+                                                                                    child: Text(
+                                                                                      ' ',
+                                                                                      style: FlutterFlowTheme.of(context).bodyMedium,
+                                                                                    ),
+                                                                                  ),
+                                                                                  Divider(
+                                                                                    thickness: 0.5,
+                                                                                    endIndent: 100.0,
+                                                                                    color: FlutterFlowTheme.of(context).primaryText,
+                                                                                  ),
+                                                                                ],
+                                                                              ),
+                                                                            ),
+                                                                          ],
+                                                                        ),
+                                                                      ),
+                                                                    ],
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                              if (responsiveVisibility(
+                                                                context:
+                                                                    context,
+                                                                phone: false,
+                                                              ))
+                                                                Expanded(
+                                                                  child: Align(
+                                                                    alignment:
+                                                                        AlignmentDirectional(
+                                                                            0.00,
+                                                                            -1.00),
+                                                                    child:
+                                                                        Column(
+                                                                      mainAxisSize:
+                                                                          MainAxisSize
+                                                                              .min,
+                                                                      crossAxisAlignment:
+                                                                          CrossAxisAlignment
+                                                                              .stretch,
+                                                                      children: [],
+                                                                    ),
+                                                                  ),
+                                                                ),
+                                                            ],
+                                                          ),
+                                                          if (responsiveVisibility(
+                                                            context: context,
+                                                            phone: false,
+                                                          ))
+                                                            Builder(
+                                                              builder:
+                                                                  (context) {
+                                                                final galleryImages = _model
+                                                                        .otherRef
+                                                                        ?.imageList
+                                                                        ?.toList() ??
+                                                                    [];
+                                                                return Container(
+                                                                  width: double
+                                                                      .infinity,
+                                                                  height: MediaQuery.sizeOf(
+                                                                              context)
+                                                                          .height *
+                                                                      0.4,
+                                                                  child: CarouselSlider
+                                                                      .builder(
+                                                                    itemCount:
+                                                                        galleryImages
+                                                                            .length,
+                                                                    itemBuilder:
+                                                                        (context,
+                                                                            galleryImagesIndex,
+                                                                            _) {
+                                                                      final galleryImagesItem =
+                                                                          galleryImages[
+                                                                              galleryImagesIndex];
+                                                                      return Column(
+                                                                        mainAxisSize:
+                                                                            MainAxisSize.min,
+                                                                        children: [
+                                                                          Align(
+                                                                            alignment:
+                                                                                AlignmentDirectional(0.00, -1.00),
+                                                                            child:
+                                                                                ClipRRect(
+                                                                              borderRadius: BorderRadius.circular(0.0),
+                                                                              child: CachedNetworkImage(
+                                                                                fadeInDuration: Duration(milliseconds: 500),
+                                                                                fadeOutDuration: Duration(milliseconds: 500),
+                                                                                imageUrl: galleryImagesItem,
+                                                                                width: MediaQuery.sizeOf(context).width * 0.4,
+                                                                                height: MediaQuery.sizeOf(context).height * 0.37,
+                                                                                fit: BoxFit.cover,
+                                                                                alignment: Alignment(-1.00, -1.00),
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                          Align(
+                                                                            alignment:
+                                                                                AlignmentDirectional(-1.00, -1.00),
+                                                                            child:
+                                                                                Padding(
+                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
+                                                                              child: Text(
+                                                                                valueOrDefault<String>(
+                                                                                  _model.exhibitionRef?.imageDescriptionList?[galleryImagesIndex],
+                                                                                  'Description',
+                                                                                ),
+                                                                                style: FlutterFlowTheme.of(context).headlineMedium.override(
+                                                                                      fontFamily: FlutterFlowTheme.of(context).headlineMediumFamily,
+                                                                                      useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).headlineMediumFamily),
+                                                                                      lineHeight: 1.43,
+                                                                                    ),
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                        ],
+                                                                      );
+                                                                    },
+                                                                    carouselController:
+                                                                        _model.carouselController2 ??=
+                                                                            CarouselController(),
+                                                                    options:
+                                                                        CarouselOptions(
+                                                                      initialPage: min(
+                                                                          2,
+                                                                          galleryImages.length -
+                                                                              1),
+                                                                      viewportFraction:
+                                                                          0.4,
+                                                                      disableCenter:
+                                                                          true,
+                                                                      enlargeCenterPage:
+                                                                          true,
+                                                                      enlargeFactor:
+                                                                          0.1,
+                                                                      enableInfiniteScroll:
+                                                                          true,
+                                                                      scrollDirection:
+                                                                          Axis.horizontal,
+                                                                      autoPlay:
+                                                                          false,
+                                                                      onPageChanged: (index,
+                                                                              _) =>
+                                                                          _model.carouselCurrentIndex2 =
+                                                                              index,
+                                                                    ),
+                                                                  ),
+                                                                );
+                                                              },
+                                                            ),
+                                                          if (responsiveVisibility(
+                                                            context: context,
+                                                            tablet: false,
+                                                            tabletLandscape:
+                                                                false,
+                                                            desktop: false,
+                                                          ))
+                                                            ClipRRect(
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .circular(
+                                                                          8.0),
+                                                              child:
+                                                                  CachedNetworkImage(
+                                                                fadeInDuration:
+                                                                    Duration(
+                                                                        milliseconds:
+                                                                            500),
+                                                                fadeOutDuration:
+                                                                    Duration(
+                                                                        milliseconds:
+                                                                            500),
+                                                                imageUrl: _model
+                                                                    .otherRef!
+                                                                    .imageList
+                                                                    .first,
+                                                                width: MediaQuery.sizeOf(
+                                                                            context)
+                                                                        .width *
+                                                                    1.0,
+                                                                height: 400.0,
+                                                                fit: BoxFit
+                                                                    .fitHeight,
+                                                              ),
+                                                            ),
+                                                          Padding(
+                                                            padding:
+                                                                EdgeInsetsDirectional
+                                                                    .fromSTEB(
+                                                                        0.0,
+                                                                        28.0,
+                                                                        0.0,
+                                                                        28.0),
+                                                            child: Row(
+                                                              mainAxisSize:
+                                                                  MainAxisSize
+                                                                      .max,
+                                                              mainAxisAlignment:
+                                                                  MainAxisAlignment
+                                                                      .spaceBetween,
+                                                              crossAxisAlignment:
+                                                                  CrossAxisAlignment
+                                                                      .start,
+                                                              children: [
+                                                                Column(
+                                                                  mainAxisSize:
+                                                                      MainAxisSize
+                                                                          .max,
+                                                                  crossAxisAlignment:
+                                                                      CrossAxisAlignment
+                                                                          .start,
+                                                                  children: [
+                                                                    Align(
+                                                                      alignment: AlignmentDirectional(
+                                                                          -1.00,
+                                                                          -1.00),
+                                                                      child:
+                                                                          Text(
+                                                                        _model
+                                                                            .otherRef!
+                                                                            .dateRowDescription!,
+                                                                        textAlign:
+                                                                            TextAlign.start,
+                                                                        style: FlutterFlowTheme.of(context)
+                                                                            .labelMedium
+                                                                            .override(
+                                                                              fontFamily: FlutterFlowTheme.of(context).labelMediumFamily,
+                                                                              useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).labelMediumFamily),
+                                                                              lineHeight: 1.3,
+                                                                            ),
+                                                                      ),
+                                                                    ),
+                                                                    if (responsiveVisibility(
+                                                                      context:
+                                                                          context,
+                                                                      tablet:
+                                                                          false,
+                                                                      tabletLandscape:
+                                                                          false,
+                                                                      desktop:
+                                                                          false,
+                                                                    ))
+                                                                      Align(
+                                                                        alignment: AlignmentDirectional(
+                                                                            -1.00,
+                                                                            0.00),
+                                                                        child:
+                                                                            Padding(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                              0.0,
+                                                                              20.0,
+                                                                              0.0,
+                                                                              0.0),
+                                                                          child:
+                                                                              Text(
+                                                                            _model.otherRef!.longText!,
+                                                                            textAlign:
+                                                                                TextAlign.start,
+                                                                            style: FlutterFlowTheme.of(context).labelMedium.override(
+                                                                                  fontFamily: FlutterFlowTheme.of(context).labelMediumFamily,
+                                                                                  useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).labelMediumFamily),
+                                                                                  lineHeight: 1.3,
+                                                                                ),
+                                                                          ),
+                                                                        ),
+                                                                      ),
+                                                                  ],
+                                                                ),
+                                                                if (responsiveVisibility(
+                                                                  context:
+                                                                      context,
+                                                                  phone: false,
+                                                                ))
+                                                                  Column(
+                                                                    mainAxisSize:
+                                                                        MainAxisSize
+                                                                            .max,
+                                                                    children: [
+                                                                      Align(
+                                                                        alignment: AlignmentDirectional(
+                                                                            0.00,
+                                                                            0.00),
+                                                                        child:
+                                                                            Padding(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                              0.0,
+                                                                              0.0,
+                                                                              24.0,
+                                                                              0.0),
+                                                                          child:
+                                                                              Container(
+                                                                            width:
+                                                                                MediaQuery.sizeOf(context).width * 0.33,
+                                                                            decoration:
+                                                                                BoxDecoration(
+                                                                              color: FlutterFlowTheme.of(context).secondaryBackground,
+                                                                            ),
+                                                                            alignment:
+                                                                                AlignmentDirectional(-1.00, -1.00),
+                                                                            child:
+                                                                                Align(
+                                                                              alignment: AlignmentDirectional(-1.00, 0.00),
+                                                                              child: Text(
+                                                                                _model.otherRef!.longText!,
+                                                                                textAlign: TextAlign.start,
+                                                                                style: FlutterFlowTheme.of(context).labelMedium.override(
+                                                                                      fontFamily: FlutterFlowTheme.of(context).labelMediumFamily,
+                                                                                      useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).labelMediumFamily),
+                                                                                      lineHeight: 1.3,
+                                                                                    ),
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                      ),
+                                                                    ],
+                                                                  ),
+                                                                if (responsiveVisibility(
+                                                                  context:
+                                                                      context,
+                                                                  phone: false,
+                                                                ))
+                                                                  Column(
+                                                                    mainAxisSize:
+                                                                        MainAxisSize
+                                                                            .max,
+                                                                    children: [],
+                                                                  ),
+                                                              ],
+                                                            ),
+                                                          ),
+                                                          if (responsiveVisibility(
+                                                            context: context,
+                                                            tablet: false,
+                                                            tabletLandscape:
+                                                                false,
+                                                            desktop: false,
+                                                          ))
+                                                            Builder(
+                                                              builder:
+                                                                  (context) {
+                                                                final galleryImagesMobile = _model
+                                                                        .otherRef
+                                                                        ?.imageList
+                                                                        ?.toList() ??
+                                                                    [];
+                                                                return ListView
+                                                                    .builder(
+                                                                  padding:
+                                                                      EdgeInsets
+                                                                          .zero,
+                                                                  shrinkWrap:
+                                                                      true,
+                                                                  scrollDirection:
+                                                                      Axis.vertical,
+                                                                  itemCount:
+                                                                      galleryImagesMobile
+                                                                          .length,
+                                                                  itemBuilder:
+                                                                      (context,
+                                                                          galleryImagesMobileIndex) {
+                                                                    final galleryImagesMobileItem =
+                                                                        galleryImagesMobile[
+                                                                            galleryImagesMobileIndex];
+                                                                    return Padding(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          0.0,
+                                                                          0.0,
+                                                                          0.0,
+                                                                          20.0),
+                                                                      child:
+                                                                          ClipRRect(
+                                                                        borderRadius:
+                                                                            BorderRadius.circular(8.0),
+                                                                        child:
+                                                                            CachedNetworkImage(
+                                                                          fadeInDuration:
+                                                                              Duration(milliseconds: 500),
+                                                                          fadeOutDuration:
+                                                                              Duration(milliseconds: 500),
+                                                                          imageUrl:
+                                                                              galleryImagesMobileItem,
+                                                                          width:
+                                                                              MediaQuery.sizeOf(context).width * 1.0,
+                                                                          height:
+                                                                              MediaQuery.sizeOf(context).height * 0.5,
+                                                                          fit: BoxFit
+                                                                              .fitHeight,
+                                                                        ),
+                                                                      ),
+                                                                    );
+                                                                  },
+                                                                );
+                                                              },
+                                                            ),
+                                                        ],
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                            wrapWithModel(
+                                              model: _model
+                                                  .subscriptionWidgetModel3,
+                                              updateCallback: () =>
+                                                  setState(() {}),
+                                              child: SubscriptionWidgetWidget(),
+                                            ),
+                                            Container(
+                                              width: MediaQuery.sizeOf(context)
+                                                      .width *
+                                                  1.0,
+                                              height: MediaQuery.sizeOf(context)
+                                                      .height *
+                                                  1.0,
+                                              child: custom_widgets
+                                                  .DragAndDropImage(
+                                                width:
+                                                    MediaQuery.sizeOf(context)
+                                                            .width *
+                                                        1.0,
+                                                height:
+                                                    MediaQuery.sizeOf(context)
+                                                            .height *
+                                                        1.0,
+                                                positionX: 20.0,
+                                                positionY: 100.0,
+                                              ),
+                                            ),
+                                            Container(
+                                              width: MediaQuery.sizeOf(context)
+                                                      .width *
+                                                  1.0,
+                                              height: MediaQuery.sizeOf(context)
+                                                      .height *
+                                                  1.0,
+                                              child: custom_widgets
+                                                  .DragAndDropImage(
+                                                width:
+                                                    MediaQuery.sizeOf(context)
+                                                            .width *
+                                                        1.0,
+                                                height:
+                                                    MediaQuery.sizeOf(context)
+                                                            .height *
+                                                        1.0,
+                                                positionX: 60.0,
+                                                positionY: 200.0,
+                                              ),
+                                            ),
+                                            Container(
+                                              width: MediaQuery.sizeOf(context)
+                                                      .width *
+                                                  1.0,
+                                              height: MediaQuery.sizeOf(context)
+                                                      .height *
+                                                  1.0,
+                                              child: custom_widgets
+                                                  .DragAndDropImage(
+                                                width:
+                                                    MediaQuery.sizeOf(context)
+                                                            .width *
+                                                        1.0,
+                                                height:
+                                                    MediaQuery.sizeOf(context)
+                                                            .height *
+                                                        1.0,
+                                                positionX: 150.0,
+                                                positionY: 600.0,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
                                       ),
                                     ],
                                   ),
