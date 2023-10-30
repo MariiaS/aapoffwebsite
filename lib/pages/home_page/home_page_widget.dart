@@ -660,7 +660,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                                       fontSize: 16.0,
                                                                                                       fontWeight: FontWeight.normal,
                                                                                                       useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).labelMediumFamily),
-                                                                                                      lineHeight: 1.4,
+                                                                                                      lineHeight: 1.3,
                                                                                                     ),
                                                                                                 minFontSize: 10.0,
                                                                                               ),
