@@ -52,7 +52,10 @@ class _TextWithBackgroundColorState extends State<TextWithBackgroundColor> {
               padding: EdgeInsets.zero,
               child: Text(
                 widget.text,
-                style: FlutterFlowTheme.of(context).displaySmall,
+                style: FlutterFlowTheme.of(context).displaySmall.copyWith(
+                      letterSpacing: -3.2, // Custom letter spacing value
+                      height: 0.94, // Custom line height value
+                    ),
               ),
             ),
           ),

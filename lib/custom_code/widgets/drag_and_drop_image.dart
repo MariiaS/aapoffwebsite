@@ -1,16 +1,9 @@
 // Automatic FlutterFlow imports
-import 'dart:convert';
-
-import 'package:flutter/services.dart';
-
 import '/backend/supabase/supabase.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'index.dart'; // Imports other custom widgets
 import 'package:flutter/material.dart';
-import 'dart:math' as math;
-import 'dart:io';
-
 // Begin custom widget code
 // DO NOT REMOVE OR MODIFY THE CODE ABOVE!
 
@@ -88,14 +81,15 @@ class _DragAndDropImageState extends State<DragAndDropImage> {
               width: 100,
               height: 100,
               decoration: BoxDecoration(
-                color: Colors.transparent, // You can set a background color here if needed
+                color: Colors
+                    .transparent, // You can set a background color here if needed
               ),
             ),
             onDraggableCanceled: (velocity, offset) {
               // When the drag is canceled, update the position.
               setState(() {
                 position = Offset(offset.dx, offset.dy - 88.0);
-              });// Load a new random image after dragging
+              }); // Load a new random image after dragging
             },
             child: Image.asset(
               _randomImage,
