@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80751c07-39dc-4340-97eb-3e16bfb95560" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/2501f97de1976f45e1baae20c0d3fb6f/.filecache" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/2501f97de1976f45e1baae20c0d3fb6f/.filecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/2501f97de1976f45e1baae20c0d3fb6f/app.dill" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/2501f97de1976f45e1baae20c0d3fb6f/app.dill" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/2501f97de1976f45e1baae20c0d3fb6f/flutter_assets.d" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/2501f97de1976f45e1baae20c0d3fb6f/flutter_assets.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/2501f97de1976f45e1baae20c0d3fb6f/main.dart.js" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/2501f97de1976f45e1baae20c0d3fb6f/main.dart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/2501f97de1976f45e1baae20c0d3fb6f/web_release_bundle.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/2501f97de1976f45e1baae20c0d3fb6f/web_release_bundle.stamp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/home_page/hover_tab_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/home_page/hover_tab_widget.dart" afterDir="false" />
-    </list>
+    <list default="true" id="3269ab2b-9017-4265-b53f-ff44464c9295" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
