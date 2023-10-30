@@ -15,6 +15,7 @@ import 'package:octo_image/octo_image.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'home_page_model.dart';
+import 'hover_tab_widget.dart';
 export 'home_page_model.dart';
 
 class HomePageWidget extends StatefulWidget {
@@ -127,7 +128,6 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                   ),
                               indicatorColor: FlutterFlowTheme.of(context)
                                   .secondaryBackground,
-                              indicatorWeight: 0.0,
                               overlayColor: MaterialStateProperty.all<Color>(
                                 FlutterFlowTheme.of(context).secondaryBackground,
                               ),
