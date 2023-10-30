@@ -1,19 +1,17 @@
-import '/backend/supabase/supabase.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:octo_image/octo_image.dart';
-import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'home_page_model.dart';
+
+import '/backend/supabase/supabase.dart';
+import '/custom_code/widgets/index.dart' as custom_widgets;
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import 'hover_tab_widget.dart';
+
 export 'home_page_model.dart';
 
 class HomePageWidget extends StatefulWidget {
@@ -38,6 +36,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
       vsync: this,
       length: 4,
       initialIndex: 0,
+      animationDuration: Duration(milliseconds: 10),
     )..addListener(() => setState(() {}));
     _model.textController1 ??= TextEditingController();
     _model.textFieldFocusNode1 ??= FocusNode();
@@ -101,6 +100,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                           Align(
                             alignment: Alignment(0.0, 0),
                             child: TabBar(
+                              physics: NeverScrollableScrollPhysics(),
                               labelColor:
                                   FlutterFlowTheme.of(context).primaryText,
                               unselectedLabelColor:
@@ -129,20 +129,63 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                   ),
                               indicatorColor: FlutterFlowTheme.of(context)
                                   .secondaryBackground,
+                              overlayColor: MaterialStateProperty.all<Color>(
+                                FlutterFlowTheme.of(context).secondaryBackground,
+                              ),
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 20.0),
                               tabs: [
-                                Tab(
-                                  text: 'NEWS',
+                                Container(
+                                  alignment: Alignment.centerLeft,
+                                  child: HoverTab(
+                                    text: 'NEWS',
+                                    isHovered: _model.hoveredTabIndex == 0,
+                                    isSelected: _model.tabBarCurrentIndex == 0,
+                                    onHover: () {
+                                      setState(() {
+                                        _model.hoveredTabIndex = 0;
+                                      });
+                                    },
+                                  ),
                                 ),
-                                Tab(
-                                  text: 'EXHIBITIONS',
+                                Container(
+                                  alignment: Alignment.centerLeft,
+                                  child: HoverTab(
+                                    text: 'EXHIBITIONS',
+                                    isHovered: _model.hoveredTabIndex == 1,
+                                    isSelected: _model.tabBarCurrentIndex == 1,
+                                    onHover: () {
+                                      setState(() {
+                                        _model.hoveredTabIndex = 1;
+                                      });
+                                    },
+                                  ),
                                 ),
-                                Tab(
-                                  text: 'OTHER',
+                                Container(
+                                  alignment: Alignment.centerRight,
+                                  child: HoverTab(
+                                    text: 'OTHER',
+                                    isHovered: _model.hoveredTabIndex == 2,
+                                    isSelected: _model.tabBarCurrentIndex == 2,
+                                    onHover: () {
+                                      setState(() {
+                                        _model.hoveredTabIndex = 2;
+                                      });
+                                    },
+                                  ),
                                 ),
-                                Tab(
-                                  text: 'INFO',
+                                Container(
+                                  alignment: Alignment.centerRight,
+                                  child: HoverTab(
+                                    text: 'INFO',
+                                    isHovered: _model.hoveredTabIndex == 3,
+                                    isSelected: _model.tabBarCurrentIndex == 3,
+                                    onHover: () {
+                                      setState(() {
+                                        _model.hoveredTabIndex = 3;
+                                      });
+                                    },
+                                  ),
                                 ),
                               ],
                               controller: _model.tabBarController,
