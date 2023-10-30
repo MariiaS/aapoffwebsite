@@ -156,7 +156,7 @@ class LightModeTheme extends FlutterFlowTheme {
   late Color primaryText = const Color(0xFF000000);
   late Color secondaryText = const Color(0x66000000);
   late Color primaryBackground = const Color(0xFFFFFFFF);
-  late Color secondaryBackground = const Color(0xFFFFFFFF);
+  late Color secondaryBackground = const Color(0x00FFFFFF);
   late Color accent1 = const Color(0x4C4B39EF);
   late Color accent2 = const Color(0x4D39D2C0);
   late Color accent3 = const Color(0x4DEE8B60);
@@ -223,29 +223,29 @@ class MobileTypography extends Typography {
   TextStyle get displaySmall => TextStyle(
         fontFamily: 'Biro Script Sloppy',
         color: theme.primaryText,
-        fontWeight: FontWeight.w500,
-        fontSize: 40.0,
+        fontWeight: FontWeight.normal,
+        fontSize: 44.0,
       );
   String get headlineLargeFamily => 'Epilogue';
   TextStyle get headlineLarge => GoogleFonts.getFont(
         'Epilogue',
         color: theme.primaryText,
-        fontWeight: FontWeight.w600,
-        fontSize: 32.0,
+        fontWeight: FontWeight.normal,
+        fontSize: 14.0,
       );
   String get headlineMediumFamily => 'Epilogue';
   TextStyle get headlineMedium => GoogleFonts.getFont(
         'Epilogue',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
-        fontSize: 24.0,
+        fontSize: 14.0,
       );
   String get headlineSmallFamily => 'Epilogue';
   TextStyle get headlineSmall => GoogleFonts.getFont(
         'Epilogue',
         color: theme.primaryText,
         fontWeight: FontWeight.w500,
-        fontSize: 24.0,
+        fontSize: 12.0,
       );
   String get titleLargeFamily => 'Epilogue';
   TextStyle get titleLarge => GoogleFonts.getFont(
@@ -257,9 +257,9 @@ class MobileTypography extends Typography {
   String get titleMediumFamily => 'Epilogue';
   TextStyle get titleMedium => GoogleFonts.getFont(
         'Epilogue',
-        color: theme.info,
-        fontWeight: FontWeight.normal,
-        fontSize: 18.0,
+        color: theme.tertiary,
+        fontWeight: FontWeight.w500,
+        fontSize: 12.0,
       );
   String get titleSmallFamily => 'Epilogue';
   TextStyle get titleSmall => GoogleFonts.getFont(
@@ -280,7 +280,7 @@ class MobileTypography extends Typography {
         'Epilogue',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
-        fontSize: 18.0,
+        fontSize: 14.0,
       );
   String get labelSmallFamily => 'Biro Script Sloppy';
   TextStyle get labelSmall => TextStyle(
@@ -301,7 +301,7 @@ class MobileTypography extends Typography {
         'Epilogue',
         color: theme.primaryText,
         fontWeight: FontWeight.w500,
-        fontSize: 14.0,
+        fontSize: 12.0,
       );
   String get bodySmallFamily => 'Biro Script Sloppy';
   TextStyle get bodySmall => TextStyle(
@@ -335,29 +335,29 @@ class TabletTypography extends Typography {
   TextStyle get displaySmall => TextStyle(
         fontFamily: 'Biro Script Sloppy',
         color: theme.primaryText,
-        fontWeight: FontWeight.w500,
-        fontSize: 40.0,
+        fontWeight: FontWeight.normal,
+        fontSize: 64.0,
       );
   String get headlineLargeFamily => 'Epilogue';
   TextStyle get headlineLarge => GoogleFonts.getFont(
         'Epilogue',
         color: theme.primaryText,
-        fontWeight: FontWeight.w600,
-        fontSize: 32.0,
+        fontWeight: FontWeight.w500,
+        fontSize: 28.0,
       );
   String get headlineMediumFamily => 'Epilogue';
   TextStyle get headlineMedium => GoogleFonts.getFont(
         'Epilogue',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
-        fontSize: 24.0,
+        fontSize: 14.0,
       );
   String get headlineSmallFamily => 'Epilogue';
   TextStyle get headlineSmall => GoogleFonts.getFont(
         'Epilogue',
         color: theme.primaryText,
         fontWeight: FontWeight.w500,
-        fontSize: 24.0,
+        fontSize: 12.0,
       );
   String get titleLargeFamily => 'Epilogue';
   TextStyle get titleLarge => GoogleFonts.getFont(
@@ -369,9 +369,9 @@ class TabletTypography extends Typography {
   String get titleMediumFamily => 'Epilogue';
   TextStyle get titleMedium => GoogleFonts.getFont(
         'Epilogue',
-        color: theme.info,
-        fontWeight: FontWeight.normal,
-        fontSize: 18.0,
+        color: theme.tertiary,
+        fontWeight: FontWeight.w500,
+        fontSize: 14.0,
       );
   String get titleSmallFamily => 'Epilogue';
   TextStyle get titleSmall => GoogleFonts.getFont(
@@ -392,7 +392,7 @@ class TabletTypography extends Typography {
         'Epilogue',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
-        fontSize: 18.0,
+        fontSize: 20.0,
       );
   String get labelSmallFamily => 'Biro Script Sloppy';
   TextStyle get labelSmall => TextStyle(
@@ -447,29 +447,29 @@ class DesktopTypography extends Typography {
   TextStyle get displaySmall => TextStyle(
         fontFamily: 'Biro Script Sloppy',
         color: theme.primaryText,
-        fontWeight: FontWeight.w500,
-        fontSize: 40.0,
+        fontWeight: FontWeight.normal,
+        fontSize: 64.0,
       );
   String get headlineLargeFamily => 'Epilogue';
   TextStyle get headlineLarge => GoogleFonts.getFont(
         'Epilogue',
         color: theme.primaryText,
-        fontWeight: FontWeight.w600,
-        fontSize: 32.0,
+        fontWeight: FontWeight.w500,
+        fontSize: 28.0,
       );
   String get headlineMediumFamily => 'Epilogue';
   TextStyle get headlineMedium => GoogleFonts.getFont(
         'Epilogue',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
-        fontSize: 24.0,
+        fontSize: 14.0,
       );
   String get headlineSmallFamily => 'Epilogue';
   TextStyle get headlineSmall => GoogleFonts.getFont(
         'Epilogue',
         color: theme.primaryText,
         fontWeight: FontWeight.w500,
-        fontSize: 24.0,
+        fontSize: 12.0,
       );
   String get titleLargeFamily => 'Epilogue';
   TextStyle get titleLarge => GoogleFonts.getFont(
@@ -481,9 +481,9 @@ class DesktopTypography extends Typography {
   String get titleMediumFamily => 'Epilogue';
   TextStyle get titleMedium => GoogleFonts.getFont(
         'Epilogue',
-        color: theme.info,
-        fontWeight: FontWeight.normal,
-        fontSize: 18.0,
+        color: theme.tertiary,
+        fontWeight: FontWeight.w500,
+        fontSize: 14.0,
       );
   String get titleSmallFamily => 'Epilogue';
   TextStyle get titleSmall => GoogleFonts.getFont(
@@ -504,7 +504,7 @@ class DesktopTypography extends Typography {
         'Epilogue',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
-        fontSize: 18.0,
+        fontSize: 20.0,
       );
   String get labelSmallFamily => 'Biro Script Sloppy';
   TextStyle get labelSmall => TextStyle(
