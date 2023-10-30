@@ -42,19 +42,18 @@ class _TextWithBackgroundColorState extends State<TextWithBackgroundColor> {
             child: Container(
               height: widget.highlightHeight,
               width: ((widget.text.length + 2) * 23).toDouble(),
-              // Adjust the multiplier based on your font size and style
               color: FlutterFlowTheme.of(context).alternate,
             ),
           ),
-          Positioned(
-            left: 0,
+          Align(
+            alignment: Alignment.topLeft,
             child: Padding(
               padding: EdgeInsets.zero,
               child: Text(
                 widget.text,
                 style: FlutterFlowTheme.of(context).displaySmall.copyWith(
-                      letterSpacing: -3.2, // Custom letter spacing value
-                      height: 0.94, // Custom line height value
+                      letterSpacing: -3.2,
+                      height: 0.94,
                     ),
               ),
             ),

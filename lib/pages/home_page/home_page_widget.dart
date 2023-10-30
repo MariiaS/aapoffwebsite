@@ -587,7 +587,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                           alignment: AlignmentDirectional(-1.0, -1.0),
                                                                                           children: [
                                                                                             Align(
-                                                                                              alignment: AlignmentDirectional(0.00, -1.00),
+                                                                                              alignment: AlignmentDirectional(-1.00, -1.00),
                                                                                               child: Padding(
                                                                                                 padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
                                                                                                 child: InkWell(
@@ -603,10 +603,10 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                                   },
                                                                                                   child: Container(
                                                                                                     width: MediaQuery.sizeOf(context).width * 0.33,
-                                                                                                    height: 68.0,
+                                                                                                    height: 66.0,
                                                                                                     child: custom_widgets.TextWithBackgroundColor(
                                                                                                       width: MediaQuery.sizeOf(context).width * 0.33,
-                                                                                                      height: 68.0,
+                                                                                                      height: 66.0,
                                                                                                       text: columnExhibitionsRow.titleCursive!,
                                                                                                       highlightHeight: 40.0,
                                                                                                     ),
