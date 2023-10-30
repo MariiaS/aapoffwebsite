@@ -88,16 +88,16 @@ class _HomePageWidgetState extends State<HomePageWidget>
                       focusColor: Colors.transparent,
                       hoverColor: Colors.transparent,
                       highlightColor: Colors.transparent,
-                      onTap: () async {
-                        setState(() {
-                          _model.isGalleryHidden = true;
-                        });
-                      },
                       child: Column(
                         children: [
                           Align(
                             alignment: Alignment(0.0, 0),
                             child: TabBar(
+                              onTap: (int index) async {
+                                setState(() {
+                                  _model.isGalleryHidden = true;
+                                });
+                              },
                               labelColor:
                                   FlutterFlowTheme.of(context).primaryText,
                               unselectedLabelColor:

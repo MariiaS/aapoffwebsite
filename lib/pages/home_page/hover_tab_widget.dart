@@ -30,7 +30,7 @@ class _HoverTabState extends State<HoverTab> {
       onEnter: (_) => widget.onHover(),
       child: Tab(
         child: Text(
-          overflow: TextOverflow.ellipsis,
+          overflow: TextOverflow.fade,
           widget.text,
           style: TextStyle(
             color: (widget.isHovered || widget.isSelected) // Check isSelected
