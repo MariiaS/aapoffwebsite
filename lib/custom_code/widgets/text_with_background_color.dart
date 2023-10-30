@@ -35,14 +35,14 @@ class _TextWithBackgroundColorState extends State<TextWithBackgroundColor> {
         maxHeight: widget.height ?? double.infinity,
       ),
       child: Stack(
-        alignment: Alignment.centerLeft,
+        alignment: Alignment.topLeft,
         children: [
           Positioned(
             left: 0,
             child: Container(
               height: widget.highlightHeight,
-              width: (widget.text.length * 20)
-                  .toDouble(), // Adjust the multiplier based on your font size and style
+              width: ((widget.text.length + 2) * 23).toDouble(),
+              // Adjust the multiplier based on your font size and style
               color: FlutterFlowTheme.of(context).alternate,
             ),
           ),

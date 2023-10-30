@@ -40,10 +40,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
       length: 4,
       initialIndex: 0,
     )..addListener(() => setState(() {}));
-    _model.textController1 ??= TextEditingController();
-    _model.textFieldFocusNode1 ??= FocusNode();
-    _model.textController2 ??= TextEditingController();
-    _model.textFieldFocusNode2 ??= FocusNode();
+    _model.textController ??= TextEditingController();
+    _model.textFieldFocusNode ??= FocusNode();
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
@@ -589,7 +587,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                           alignment: AlignmentDirectional(-1.0, -1.0),
                                                                                           children: [
                                                                                             Align(
-                                                                                              alignment: AlignmentDirectional(-1.00, 0.00),
+                                                                                              alignment: AlignmentDirectional(0.00, -1.00),
                                                                                               child: Padding(
                                                                                                 padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
                                                                                                 child: InkWell(
@@ -605,12 +603,12 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                                   },
                                                                                                   child: Container(
                                                                                                     width: MediaQuery.sizeOf(context).width * 0.33,
-                                                                                                    height: 54.0,
+                                                                                                    height: 68.0,
                                                                                                     child: custom_widgets.TextWithBackgroundColor(
                                                                                                       width: MediaQuery.sizeOf(context).width * 0.33,
-                                                                                                      height: 54.0,
+                                                                                                      height: 68.0,
                                                                                                       text: columnExhibitionsRow.titleCursive!,
-                                                                                                      highlightHeight: 36.0,
+                                                                                                      highlightHeight: 40.0,
                                                                                                     ),
                                                                                                   ),
                                                                                                 ),
@@ -624,7 +622,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                                 crossAxisAlignment: CrossAxisAlignment.start,
                                                                                                 children: [
                                                                                                   Padding(
-                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 18.0),
                                                                                                     child: Text(
                                                                                                       ' ',
                                                                                                       style: FlutterFlowTheme.of(context).bodyMedium,
@@ -1072,408 +1070,6 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium,
                                       ),
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 10.0, 0.0, 10.0),
-                                        child: Row(
-                                          mainAxisSize: MainAxisSize.max,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            if (responsiveVisibility(
-                                              context: context,
-                                              phone: false,
-                                            ))
-                                              Expanded(
-                                                child: Padding(
-                                                  padding: EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          24.0, 0.0, 0.0, 0.0),
-                                                  child: AutoSizeText(
-                                                    'AAPO NIKKANEN',
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMediumFamily,
-                                                          useGoogleFonts: GoogleFonts
-                                                                  .asMap()
-                                                              .containsKey(
-                                                                  FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMediumFamily),
-                                                          lineHeight: 1.14,
-                                                        ),
-                                                  ),
-                                                ),
-                                              ),
-                                            Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      8.0, 0.0, 24.0, 0.0),
-                                              child: Column(
-                                                mainAxisSize: MainAxisSize.max,
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.end,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.start,
-                                                children: [
-                                                  if (responsiveVisibility(
-                                                    context: context,
-                                                    tablet: false,
-                                                    tabletLandscape: false,
-                                                    desktop: false,
-                                                  ))
-                                                    Container(
-                                                      width: MediaQuery.sizeOf(
-                                                                  context)
-                                                              .width *
-                                                          0.95,
-                                                      height: 50.0,
-                                                      decoration: BoxDecoration(
-                                                        color: FlutterFlowTheme
-                                                                .of(context)
-                                                            .secondaryBackground,
-                                                      ),
-                                                      child: Row(
-                                                        mainAxisSize:
-                                                            MainAxisSize.max,
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .spaceBetween,
-                                                        children: [
-                                                          Align(
-                                                            alignment:
-                                                                AlignmentDirectional(
-                                                                    -1.00,
-                                                                    -1.00),
-                                                            child: Text(
-                                                              'AAPO NIKKANEN\n12 RUE DE CLIGNANCOURT \n75018 PARIS ',
-                                                              style: FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .bodyMedium,
-                                                            ),
-                                                          ),
-                                                          Align(
-                                                            alignment:
-                                                                AlignmentDirectional(
-                                                                    -1.00,
-                                                                    -1.00),
-                                                            child: Text(
-                                                              '+33 (0) 7 61 81 58 63\nINSTAGRAM \n@aapoxaapo',
-                                                              textAlign:
-                                                                  TextAlign
-                                                                      .start,
-                                                              style: FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .bodyMedium,
-                                                            ),
-                                                          ),
-                                                        ],
-                                                      ),
-                                                    ),
-                                                  Align(
-                                                    alignment:
-                                                        AlignmentDirectional(
-                                                            -1.00, -1.00),
-                                                    child: Container(
-                                                      height: 34.0,
-                                                      child: Stack(
-                                                        children: [
-                                                          Row(
-                                                            mainAxisSize:
-                                                                MainAxisSize
-                                                                    .max,
-                                                            mainAxisAlignment:
-                                                                MainAxisAlignment
-                                                                    .spaceBetween,
-                                                            crossAxisAlignment:
-                                                                CrossAxisAlignment
-                                                                    .end,
-                                                            children: [
-                                                              Container(
-                                                                width: 310.0,
-                                                                decoration:
-                                                                    BoxDecoration(),
-                                                                child: Align(
-                                                                  alignment:
-                                                                      AlignmentDirectional(
-                                                                          0.00,
-                                                                          0.00),
-                                                                  child:
-                                                                      TextFormField(
-                                                                    controller:
-                                                                        _model
-                                                                            .textController1,
-                                                                    focusNode:
-                                                                        _model
-                                                                            .textFieldFocusNode1,
-                                                                    textCapitalization:
-                                                                        TextCapitalization
-                                                                            .characters,
-                                                                    obscureText:
-                                                                        false,
-                                                                    decoration:
-                                                                        InputDecoration(
-                                                                      labelStyle: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .bodyMedium
-                                                                          .override(
-                                                                            fontFamily:
-                                                                                FlutterFlowTheme.of(context).bodyMediumFamily,
-                                                                            useGoogleFonts:
-                                                                                GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
-                                                                            lineHeight:
-                                                                                1.14,
-                                                                          ),
-                                                                      hintText:
-                                                                          'ENTER YOUR EMAIL',
-                                                                      hintStyle: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .titleMedium
-                                                                          .override(
-                                                                            fontFamily:
-                                                                                FlutterFlowTheme.of(context).titleMediumFamily,
-                                                                            useGoogleFonts:
-                                                                                GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).titleMediumFamily),
-                                                                            lineHeight:
-                                                                                1.14,
-                                                                          ),
-                                                                      enabledBorder:
-                                                                          UnderlineInputBorder(
-                                                                        borderSide:
-                                                                            BorderSide(
-                                                                          color:
-                                                                              FlutterFlowTheme.of(context).primary,
-                                                                          width:
-                                                                              1.0,
-                                                                        ),
-                                                                        borderRadius:
-                                                                            BorderRadius.circular(0.0),
-                                                                      ),
-                                                                      focusedBorder:
-                                                                          UnderlineInputBorder(
-                                                                        borderSide:
-                                                                            BorderSide(
-                                                                          color:
-                                                                              FlutterFlowTheme.of(context).primary,
-                                                                          width:
-                                                                              1.0,
-                                                                        ),
-                                                                        borderRadius:
-                                                                            BorderRadius.circular(0.0),
-                                                                      ),
-                                                                      errorBorder:
-                                                                          UnderlineInputBorder(
-                                                                        borderSide:
-                                                                            BorderSide(
-                                                                          color:
-                                                                              FlutterFlowTheme.of(context).error,
-                                                                          width:
-                                                                              1.0,
-                                                                        ),
-                                                                        borderRadius:
-                                                                            BorderRadius.circular(0.0),
-                                                                      ),
-                                                                      focusedErrorBorder:
-                                                                          UnderlineInputBorder(
-                                                                        borderSide:
-                                                                            BorderSide(
-                                                                          color:
-                                                                              FlutterFlowTheme.of(context).error,
-                                                                          width:
-                                                                              1.0,
-                                                                        ),
-                                                                        borderRadius:
-                                                                            BorderRadius.circular(0.0),
-                                                                      ),
-                                                                    ),
-                                                                    style: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .bodyMedium
-                                                                        .override(
-                                                                          fontFamily:
-                                                                              FlutterFlowTheme.of(context).bodyMediumFamily,
-                                                                          useGoogleFonts:
-                                                                              GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
-                                                                          lineHeight:
-                                                                              1.14,
-                                                                        ),
-                                                                    textAlign:
-                                                                        TextAlign
-                                                                            .start,
-                                                                    keyboardType:
-                                                                        TextInputType
-                                                                            .emailAddress,
-                                                                    validator: _model
-                                                                        .textController1Validator
-                                                                        .asValidator(
-                                                                            context),
-                                                                  ),
-                                                                ),
-                                                              ),
-                                                              Align(
-                                                                alignment:
-                                                                    AlignmentDirectional(
-                                                                        0.00,
-                                                                        1.00),
-                                                                child: Padding(
-                                                                  padding: EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          0.0,
-                                                                          0.0,
-                                                                          0.0,
-                                                                          4.0),
-                                                                  child:
-                                                                      InkWell(
-                                                                    splashColor:
-                                                                        Colors
-                                                                            .transparent,
-                                                                    focusColor:
-                                                                        Colors
-                                                                            .transparent,
-                                                                    hoverColor:
-                                                                        Colors
-                                                                            .transparent,
-                                                                    highlightColor:
-                                                                        Colors
-                                                                            .transparent,
-                                                                    onTap:
-                                                                        () async {
-                                                                      await launchUrl(Uri(
-                                                                          scheme: 'mailto',
-                                                                          path: 'mayyouseethesun@gmail.com',
-                                                                          query: {
-                                                                            'subject':
-                                                                                'This person would like to subscribe to your email!',
-                                                                            'body':
-                                                                                _model.textController1.text,
-                                                                          }.entries.map((MapEntry<String, String> e) => '${Uri.encodeComponent(e.key)}=${Uri.encodeComponent(e.value)}').join('&')));
-                                                                      ScaffoldMessenger.of(
-                                                                              context)
-                                                                          .showSnackBar(
-                                                                        SnackBar(
-                                                                          content:
-                                                                              Text(
-                                                                            'You are signed up for the news!',
-                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                  fontFamily: FlutterFlowTheme.of(context).bodyMediumFamily,
-                                                                                  color: FlutterFlowTheme.of(context).primaryText,
-                                                                                  useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
-                                                                                ),
-                                                                          ),
-                                                                          duration:
-                                                                              Duration(milliseconds: 4000),
-                                                                          backgroundColor:
-                                                                              FlutterFlowTheme.of(context).alternate,
-                                                                        ),
-                                                                      );
-                                                                    },
-                                                                    child: Text(
-                                                                      'SIGN UP',
-                                                                      textAlign:
-                                                                          TextAlign
-                                                                              .end,
-                                                                      style: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .bodyMedium
-                                                                          .override(
-                                                                            fontFamily:
-                                                                                FlutterFlowTheme.of(context).bodyMediumFamily,
-                                                                            useGoogleFonts:
-                                                                                GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
-                                                                            lineHeight:
-                                                                                1.14,
-                                                                          ),
-                                                                    ),
-                                                                  ),
-                                                                ),
-                                                              ),
-                                                            ],
-                                                          ),
-                                                          Column(
-                                                            mainAxisSize:
-                                                                MainAxisSize
-                                                                    .max,
-                                                            crossAxisAlignment:
-                                                                CrossAxisAlignment
-                                                                    .start,
-                                                            children: [
-                                                              Padding(
-                                                                padding:
-                                                                    EdgeInsetsDirectional
-                                                                        .fromSTEB(
-                                                                            0.0,
-                                                                            0.0,
-                                                                            0.0,
-                                                                            6.0),
-                                                                child: Text(
-                                                                  'NEWSLETTER',
-                                                                  style: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium
-                                                                      .override(
-                                                                        fontFamily:
-                                                                            FlutterFlowTheme.of(context).bodyMediumFamily,
-                                                                        useGoogleFonts:
-                                                                            GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
-                                                                        lineHeight:
-                                                                            1.14,
-                                                                      ),
-                                                                ),
-                                                              ),
-                                                            ],
-                                                          ),
-                                                          Column(
-                                                            mainAxisSize:
-                                                                MainAxisSize
-                                                                    .max,
-                                                            mainAxisAlignment:
-                                                                MainAxisAlignment
-                                                                    .end,
-                                                            children: [
-                                                              Padding(
-                                                                padding:
-                                                                    EdgeInsetsDirectional
-                                                                        .fromSTEB(
-                                                                            0.0,
-                                                                            0.0,
-                                                                            0.0,
-                                                                            6.0),
-                                                                child: Text(
-                                                                  ' ',
-                                                                  style: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .titleSmall,
-                                                                ),
-                                                              ),
-                                                              SizedBox(
-                                                                width: 360.0,
-                                                                child: Divider(
-                                                                  thickness:
-                                                                      0.5,
-                                                                  color: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .primaryText,
-                                                                ),
-                                                              ),
-                                                            ],
-                                                          ),
-                                                        ],
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
                                     ],
                                   ),
                                 ),
@@ -1590,10 +1186,10 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                       TextFormField(
                                                                     controller:
                                                                         _model
-                                                                            .textController2,
+                                                                            .textController,
                                                                     focusNode:
                                                                         _model
-                                                                            .textFieldFocusNode2,
+                                                                            .textFieldFocusNode,
                                                                     textCapitalization:
                                                                         TextCapitalization
                                                                             .characters,
@@ -1694,7 +1290,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         TextInputType
                                                                             .emailAddress,
                                                                     validator: _model
-                                                                        .textController2Validator
+                                                                        .textControllerValidator
                                                                         .asValidator(
                                                                             context),
                                                                   ),
@@ -1725,7 +1321,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                           'subject':
                                                                               'This person would like to subscribe to your email!',
                                                                           'body': _model
-                                                                              .textController2
+                                                                              .textController
                                                                               .text,
                                                                         }.entries.map((MapEntry<String, String> e) => '${Uri.encodeComponent(e.key)}=${Uri.encodeComponent(e.value)}').join('&')));
                                                                     ScaffoldMessenger.of(
