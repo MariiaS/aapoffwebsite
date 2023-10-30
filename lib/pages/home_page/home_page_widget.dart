@@ -130,7 +130,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                 FlutterFlowTheme.of(context).secondaryBackground,
                               ),
                               padding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 20.0),
+                                  0.0, 0.0, 0.0, 0.0),
                               tabs: [
                                 Container(
                                   alignment: Alignment.centerLeft,
