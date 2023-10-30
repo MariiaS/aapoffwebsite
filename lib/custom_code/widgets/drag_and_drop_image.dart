@@ -12,14 +12,12 @@ class DragAndDropImage extends StatefulWidget {
     Key? key,
     this.width,
     this.height,
-    required this.image,
     required this.positionX,
     required this.positionY,
   }) : super(key: key);
 
   final double? width;
   final double? height;
-  final String image;
   final double positionX;
   final double positionY;
 
@@ -29,12 +27,37 @@ class DragAndDropImage extends StatefulWidget {
 
 class _DragAndDropImageState extends State<DragAndDropImage> {
   late Offset position;
+  late String _randomImage;
 
   @override
   void initState() {
     super.initState();
     position = Offset(
         widget.positionX, widget.positionY); // Initial position of the image
+    _loadRandomImage();
+  }
+
+  Future<void> _loadRandomImage() async {
+    try {
+      final manifestContent = await rootBundle.loadString('AssetManifest.json');
+      final manifestMap = json.decode(manifestContent);
+      var imagePaths = manifestMap.keys
+          .where((String key) => key.startsWith('assets/images/pins/'))
+          .toList();
+
+      if (imagePaths.isNotEmpty) {
+        _randomImage = imagePaths[math.Random().nextInt(imagePaths.length)];
+      } else {
+        // Handle the case when no images are found in the directory
+        _randomImage = "null"; // Set _randomImage to null
+      }
+      setState(() {}); // Trigger a rebuild after loading the random image
+    } catch (e) {
+      // Handle exceptions if necessary
+      print('Error loading image: $e');
+      _randomImage = "null"; // Set _randomImage to null
+      setState(() {}); // Trigger a rebuild even if there was an error
+    }
   }
 
   @override
@@ -46,10 +69,10 @@ class _DragAndDropImageState extends State<DragAndDropImage> {
           top: position.dy,
           child: Draggable<String>(
             // Data is the value this Draggable stores.
-            data: widget.image,
+            data: _randomImage,
 
-            feedback: Image.network(
-              widget.image,
+            feedback: Image.asset(
+              _randomImage,
               width: 100,
               height: 100,
               fit: BoxFit.contain,
@@ -66,10 +89,10 @@ class _DragAndDropImageState extends State<DragAndDropImage> {
               // When the drag is canceled, update the position.
               setState(() {
                 position = Offset(offset.dx, offset.dy - 88.0);
-              });
+              }); // Load a new random image after dragging
             },
             child: Image.asset(
-              widget.image,
+              _randomImage,
               width: 100,
               height: 100,
               fit: BoxFit.contain,
